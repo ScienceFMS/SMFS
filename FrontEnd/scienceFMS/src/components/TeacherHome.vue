@@ -13,10 +13,10 @@
       <p>这里是教师可以访问的功能区域</p>
       
       <div class="features">
-        <div class="feature-card">
+        <router-link to="/Keyan" class="feature-card">
           <h3>我的科研成果</h3>
           <p>查看和管理您的科研成果记录</p>
-        </div>
+        </router-link>
         <div class="feature-card">
           <h3>数据统计</h3>
           <p>查看个人科研数据统计和报表</p>

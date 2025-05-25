@@ -73,3 +73,85 @@
 2025-05-25 20:49:02.916 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
 2025-05-25 20:49:07.991 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-25 20:49:07.996 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-25 21:09:50.857 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - Starting ScienceFmsApplicationTests using Java 17.0.15 with PID 45204 (started by 16586 in D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS)
+2025-05-25 21:09:50.858 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplicationTests - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-25 21:09:50.858 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-05-25 21:09:52.895 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-25 21:09:53.088 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - Started ScienceFmsApplicationTests in 2.563 seconds (process running for 3.357)
+2025-05-25 21:10:09.413 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - Starting ScienceFmsApplicationTests using Java 17.0.15 with PID 14640 (started by 16586 in D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS)
+2025-05-25 21:10:09.414 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplicationTests - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-25 21:10:09.414 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-05-25 21:10:11.262 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-25 21:10:11.470 [main] INFO  hit.cs.sciencefms.ScienceFmsApplicationTests - Started ScienceFmsApplicationTests in 2.36 seconds (process running for 3.119)
+2025-05-25 21:10:22.897 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.15 with PID 45164 (D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS\target\classes started by 16586 in D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS)
+2025-05-25 21:10:22.898 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-25 21:10:22.899 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-25 21:10:23.704 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-25 21:10:23.712 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-25 21:10:23.712 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-25 21:10:23.793 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-25 21:10:23.793 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 856 ms
+2025-05-25 21:10:23.887 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-25 21:10:24.192 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-25 21:10:24.331 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-25 21:10:24.337 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.77 seconds (process running for 2.152)
+2025-05-25 21:14:15.769 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.15 with PID 43668 (D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS\target\classes started by 16586 in D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS)
+2025-05-25 21:14:15.770 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-25 21:14:15.770 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-25 21:14:16.378 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-25 21:14:16.384 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-25 21:14:16.385 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-25 21:14:16.450 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-25 21:14:16.450 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 653 ms
+2025-05-25 21:14:16.518 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-25 21:14:16.793 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-25 21:14:16.919 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-25 21:14:16.925 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.469 seconds (process running for 1.829)
+2025-05-25 21:14:27.317 [http-nio-8082-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-25 21:14:27.317 [http-nio-8082-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-25 21:14:27.318 [http-nio-8082-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-25 21:14:27.424 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-25 21:14:27.471 [http-nio-8082-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @34a3d150
+2025-05-25 21:14:27.482 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-25 21:14:27.798 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3abd8356
+2025-05-25 21:14:27.799 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-25 21:14:27.807 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-25 21:14:27.819 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-25 21:14:27.879 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-25 21:14:27.886 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-25 21:14:27.887 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-25 21:14:27.917 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-25 21:32:09.607 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-25 21:32:09.610 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-25 21:39:01.311 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.15 with PID 35620 (D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS\target\classes started by 16586 in D:\0_myCodesssss\IDEA\ruanJianGongcheng\SMFS\BackEnd\scienceFMS)
+2025-05-25 21:39:01.313 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-25 21:39:01.313 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-25 21:39:02.058 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-25 21:39:02.065 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-25 21:39:02.065 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-25 21:39:02.123 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-25 21:39:02.123 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 780 ms
+2025-05-25 21:39:02.190 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-25 21:39:02.553 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-25 21:39:02.696 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-25 21:39:02.703 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.742 seconds (process running for 2.093)
+2025-05-25 21:47:16.475 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-25 21:47:16.475 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-25 21:47:16.476 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-25 21:47:16.568 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: Teacher1
+2025-05-25 21:47:16.608 [http-nio-8082-exec-2] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @34a3d150
+2025-05-25 21:47:16.621 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-25 21:47:16.950 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40eeb9c5
+2025-05-25 21:47:16.951 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-25 21:47:16.956 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-25 21:47:16.964 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: Teacher1(String)
+2025-05-25 21:47:17.018 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 0
+2025-05-25 21:47:24.531 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-25 21:47:24.566 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-25 21:47:24.566 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-25 21:47:24.602 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-25 21:47:24.602 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-25 21:47:24.602 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-25 21:47:24.650 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-25 22:10:43.318 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-25 22:10:43.320 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
