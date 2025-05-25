@@ -30,10 +30,17 @@ public class JwtFilter extends OncePerRequestFilter {
      * 不需要验证token的路径
      */
     private static final List<String> EXCLUDE_PATHS = Arrays.asList(
-            "/api/auth/login",
-            "/api/auth/register",
+            "/auth/login",
+            "/auth/register",
             "/swagger-ui/**",
-            "/v3/api-docs/**"
+            "/v3/api-docs/**",
+            "/error",
+            "/*.html",
+            "/*.js",
+            "/*.css",
+            "/*.ico",
+            "/static/**",
+            "/assets/**"
     );
     
     private final AntPathMatcher pathMatcher = new AntPathMatcher();

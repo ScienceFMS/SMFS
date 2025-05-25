@@ -18,13 +18,13 @@ public class WebConfig implements WebMvcConfigurer {
     private JwtFilter jwtFilter;
     
     /**
-     * 注册JWT过滤器,拦截所有/api/的请求，而/api/auth/login属于排除在外的，直接放行
+     * 注册JWT过滤器，应用到所有需要登录验证的URLs
      */
     @Bean
     public FilterRegistrationBean<JwtFilter> jwtFilterRegistration() {
         FilterRegistrationBean<JwtFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(jwtFilter);
-        registration.addUrlPatterns("/api/*"); // 应用到所有API路径
+        registration.addUrlPatterns("/*"); // 应用到所有路径
         registration.setOrder(Ordered.HIGHEST_PRECEDENCE + 10); // 设置优先级
         return registration;
     }
