@@ -4,6 +4,41 @@ spring:
     username: postgres
     password: root123456
     driver-class-name: org.postgresql.Driver
+    # 初始化数据库脚本
+    # initialization-mode: always
+    # schema: classpath:db/schema.sql
+  
+  # 应用配置
+  application:
+    name: scienceFMS
 
+# 服务器配置
 server:
   port: 8082
+  servlet:
+    context-path: /
+  
+# MyBatis-Plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: hit.cs.sciencefms.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: is_deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# 日志配置
+logging:
+  level:
+    root: info
+    hit.cs.sciencefms: debug
+  file:
+    name: logs/sciencefms.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
