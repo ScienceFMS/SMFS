@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
         // 生成JWT令牌
         String token = jwtUtil.generateToken(user.getId(), user.getUsername(), user.getRole());
 
-        System.out.println("token: " + token);
+        log.info("JWT token: {}", token);
         
         // 构建登录响应
         LoginResponse loginResponse = new LoginResponse();

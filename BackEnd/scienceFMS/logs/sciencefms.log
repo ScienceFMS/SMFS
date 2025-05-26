@@ -683,3 +683,12 @@
 2025-05-26 16:41:48.960 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
 2025-05-26 16:41:48.960 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 2(Long)
 2025-05-26 16:41:49.028 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 16:58:08.089 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:58:08.156 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:58:08.157 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher2(String)
+2025-05-26 16:58:08.187 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:58:08.188 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:58:08.188 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 2(Long)
+2025-05-26 16:58:08.274 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 17:00:42.713 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 17:00:42.723 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
