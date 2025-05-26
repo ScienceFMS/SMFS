@@ -6,15 +6,14 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
- * 教师实体类
+ * 教师教育背景实体类
  */
 @Data
-@TableName("t_teacher")
-public class Teacher {
+@TableName("t_teacher_education")
+public class TeacherEducation {
     
     /**
      * 主键ID
@@ -23,64 +22,34 @@ public class Teacher {
     private Long id;
     
     /**
-     * 用户名
+     * 教师ID(关联教师表)
      */
-    private String username;
+    private Long teacherId;
     
     /**
-     * 真实姓名
+     * 学位
      */
-    private String realName;
+    private String degree;
     
     /**
-     * 性别
+     * 院校
      */
-    private String gender;
+    private String institution;
     
     /**
-     * 出生日期
+     * 专业
      */
-    private LocalDate birthDate;
+    private String major;
     
     /**
-     * 职称
+     * 开始年份
      */
-    private String title;
+    private Integer startYear;
     
     /**
-     * 所属部门
+     * 结束年份
      */
-    private String department;
-    
-    /**
-     * 职位
-     */
-    private String position;
-    
-    /**
-     * 研究方向
-     */
-    private String researchArea;
-    
-    /**
-     * 电子邮箱
-     */
-    private String email;
-    
-    /**
-     * 联系电话
-     */
-    private String phone;
-    
-    /**
-     * 办公地点
-     */
-    private String officeLocation;
-    
-    /**
-     * 头像URL
-     */
-    private String avatarUrl;
+    private Integer endYear;
     
     /**
      * 创建时间

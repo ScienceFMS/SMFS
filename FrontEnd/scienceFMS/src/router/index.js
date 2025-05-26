@@ -3,6 +3,14 @@ import Login from '../components/Login.vue';
 import TeacherHome from '../components/TeacherHome.vue';
 import AdminHome from '../components/AdminHome.vue';
 
+// 教师功能页面
+import PersonalInfo from '../components/teacher/PersonalInfo.vue';
+import ResearchProjects from '../components/teacher/ResearchProjects.vue';
+import Awards from '../components/teacher/Awards.vue';
+import Patents from '../components/teacher/Patents.vue';
+import Visits from '../components/teacher/Visits.vue';
+import Settings from '../components/teacher/Settings.vue';
+
 const routes = [
   {
     path: '/',
@@ -18,7 +26,46 @@ const routes = [
     path: '/teacher',
     name: 'TeacherHome',
     component: TeacherHome,
-    meta: { requiresAuth: true, role: 'teacher' }
+    meta: { requiresAuth: true, role: 'teacher' },
+    redirect: '/teacher/personal-info',
+    children: [
+      {
+        path: 'personal-info',
+        name: 'PersonalInfo',
+        component: PersonalInfo,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'research-projects',
+        name: 'ResearchProjects',
+        component: ResearchProjects,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'awards',
+        name: 'Awards',
+        component: Awards,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'patents',
+        name: 'Patents',
+        component: Patents,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'visits',
+        name: 'Visits',
+        component: Visits,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'settings',
+        name: 'Settings',
+        component: Settings,
+        meta: { requiresAuth: true, role: 'teacher' }
+      }
+    ]
   },
   {
     path: '/admin',

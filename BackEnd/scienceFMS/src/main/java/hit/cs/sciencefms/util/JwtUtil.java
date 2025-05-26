@@ -99,6 +99,7 @@ public class JwtUtil {
                     .setSigningKey(SECRET_KEY)
                     .build()
                     .parseClaimsJws(token);
+            log.info("JWT验证成功");
             return true;
         } catch (Exception e) {
             log.error("JWT验证失败: {}", e.getMessage());

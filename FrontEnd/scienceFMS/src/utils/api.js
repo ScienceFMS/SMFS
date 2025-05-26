@@ -78,5 +78,38 @@ export const checkLogin = () => {
   return api.get('/auth/checkLogin');
 };
 
+/**
+ * 获取当前登录教师的个人资料
+ * @returns {Promise}
+ */
+export const getTeacherProfile = () => {
+  // 从localStorage获取用户信息
+  const userStr = localStorage.getItem('user');
+  const user = userStr ? JSON.parse(userStr) : null;
+  
+  if (user) {
+    // 如果有用户名，优先使用用户名
+    if (user.username) {
+      return api.get(`/teacher/profile/me?username=${user.username}`);
+    } 
+    // 否则使用用户ID
+    else if (user.userId) {
+      return api.get(`/teacher/profile/me?userId=${user.userId}`);
+    }
+  }
+  
+  // 如果没有用户信息，仍然发送请求(将在后端处理错误)
+  return api.get('/teacher/profile/me');
+};
+
+/**
+ * 根据ID获取教师个人资料
+ * @param {Number} teacherId - 教师ID
+ * @returns {Promise}
+ */
+export const getTeacherProfileById = (teacherId) => {
+  return api.get(`/teacher/profile/${teacherId}`);
+};
+
 // 导出api实例
 export default api; 

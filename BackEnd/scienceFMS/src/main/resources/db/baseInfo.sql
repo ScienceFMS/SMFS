@@ -3,8 +3,30 @@ CREATE TABLE t_teacher (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     real_name VARCHAR(100) NOT NULL,
+    gender VARCHAR(10), -- 性别
+    birth_date DATE, -- 出生日期
+    title VARCHAR(50), -- 职称
     department VARCHAR(100),
     position VARCHAR(50),
+    research_area TEXT, -- 研究方向
+    email VARCHAR(100), -- 电子邮箱
+    phone VARCHAR(20), -- 联系电话
+    office_location VARCHAR(100), -- 办公地点
+    avatar_url VARCHAR(255), -- 头像URL
+    create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    is_deleted INTEGER DEFAULT 0
+);
+
+-- 教师教育背景表（新增表）
+CREATE TABLE t_teacher_education (
+    id SERIAL PRIMARY KEY,
+    teacher_id INTEGER NOT NULL REFERENCES t_teacher(id),
+    degree VARCHAR(50) NOT NULL, -- 学位
+    institution VARCHAR(100) NOT NULL, -- 院校
+    major VARCHAR(100) NOT NULL, -- 专业
+    start_year INTEGER NOT NULL, -- 开始年份
+    end_year INTEGER NOT NULL, -- 结束年份
     create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     update_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     is_deleted INTEGER DEFAULT 0

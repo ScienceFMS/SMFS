@@ -4,6 +4,7 @@
 
 // 检查用户是否已登录
 export const isAuthenticated = () => {
+  console.log('isAuthenticated', localStorage.getItem('token'), localStorage.getItem('isLoggedIn'));
   return localStorage.getItem('token') !== null && localStorage.getItem('isLoggedIn') === 'true';
 };
 

@@ -32,6 +32,7 @@ public class JwtFilter extends OncePerRequestFilter {
     private static final List<String> EXCLUDE_PATHS = Arrays.asList(
             "/auth/login",
             "/auth/register",
+//            "/teacher/profile/me",
             "/swagger-ui/**",
             "/v3/api-docs/**",
             "/error",
@@ -98,6 +99,9 @@ public class JwtFilter extends OncePerRequestFilter {
     private String getTokenFromRequest(HttpServletRequest request) {
         String bearerToken = request.getHeader("Authorization");
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+
+            System.out.println("bearerToken: " + bearerToken.substring(7));
+            
             return bearerToken.substring(7);
         }
         return null;

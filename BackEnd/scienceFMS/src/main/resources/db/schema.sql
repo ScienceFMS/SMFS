@@ -14,10 +14,10 @@ CREATE TABLE IF NOT EXISTS t_user (
 );
 
 -- 创建初始管理员和教师账号
-INSERT INTO t_user (username, password, role, real_name, status) 
-VALUES ('admin1', '123456', 'admin', '管理员', 0)
-ON CONFLICT (username) DO NOTHING;
+--INSERT INTO t_user (username, password, role, real_name, status) 
+--VALUES ('admin1', '123456', 'admin', '管理员', 0)
+--ON CONFLICT (username) DO NOTHING;
 
-INSERT INTO t_user (username, password, role, real_name, status) 
-VALUES ('teacher1', '123456', 'teacher', '张教师', 0)
-ON CONFLICT (username) DO NOTHING; 
+--INSERT INTO t_user (username, password, role, real_name, status) 
+--VALUES ('teacher1', '123456', 'teacher', '张教师', 0)
+--ON CONFLICT (username) DO NOTHING; 
