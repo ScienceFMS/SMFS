@@ -32,4 +32,8 @@ public class LoginResponse {
      * JWT令牌
      */
     private String token;
+
+    // 新增字段
+    private Long teacherId;
+    private Long adminId;
 } 

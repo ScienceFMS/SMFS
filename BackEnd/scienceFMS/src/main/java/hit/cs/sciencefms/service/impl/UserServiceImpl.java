@@ -12,6 +12,8 @@ import hit.cs.sciencefms.util.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import hit.cs.sciencefms.mapper.TeacherMapper;
+import hit.cs.sciencefms.entity.Teacher;
 
 /**
  * 用户服务实现
@@ -27,7 +29,9 @@ public class UserServiceImpl implements UserService {
     
     @Autowired
     private UserMapper userMapper;
-    
+
+    @Autowired
+    private TeacherMapper teacherMapper;
     @Autowired
     private JwtUtil jwtUtil;
     
@@ -78,6 +82,27 @@ public class UserServiceImpl implements UserService {
         loginResponse.setRole(user.getRole());
         loginResponse.setRealName(user.getRealName());
         loginResponse.setToken(token);
+
+        // 根据角色查询特定ID
+        if ("teacher".equals(user.getRole())) {
+            // 查询教师表
+            Teacher teacher = teacherMapper.selectOne(
+                new LambdaQueryWrapper<Teacher>()
+                    .eq(Teacher::getUsername, user.getUsername())
+            );
+            if (teacher != null) {
+                loginResponse.setTeacherId(teacher.getId());
+            }
+        } else if ("admin".equals(user.getRole())) {
+            // // 查询管理员表,等之后要用了再扩充，这个其实不需要
+            // Admin admin = adminMapper.selectOne(
+            //     new LambdaQueryWrapper<Admin>()
+            //         .eq(Admin::getUsername, user.getUsername())
+            // );
+            // if (admin != null) {
+            //     loginResponse.setAdminId(admin.getId());
+            // }
+        }
         
         return Result.success(loginResponse);
     }

@@ -34,7 +34,7 @@ public class ResearchProject {
     private String projectCode;
     
     /**
-     * 项目来源
+     * 项目来源，国家级、省级、横向等等
      */
     private String source;
     

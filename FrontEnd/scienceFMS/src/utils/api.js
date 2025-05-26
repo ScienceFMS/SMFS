@@ -111,5 +111,50 @@ export const getTeacherProfileById = (teacherId) => {
   return api.get(`/teacher/profile/${teacherId}`);
 };
 
+/**
+ * 获取教师的科研项目列表（分页）
+ * @param {Object} params - 查询参数
+ * @returns {Promise}
+ */
+export const getResearchProjects = (params) => {
+  return api.get('/projects/page', { params });
+};
+
+/**
+ * 获取单个科研项目详情
+ * @param {Number} id - 项目ID
+ * @returns {Promise}
+ */
+export const getResearchProjectById = (id) => {
+  return api.get(`/projects/${id}`);
+};
+
+/**
+ * 添加科研项目
+ * @param {Object} project - 项目信息
+ * @returns {Promise}
+ */
+export const addResearchProject = (project) => {
+  return api.post('/projects/add', project);
+};
+
+/**
+ * 更新科研项目
+ * @param {Object} project - 项目信息
+ * @returns {Promise}
+ */
+export const updateResearchProject = (project) => {
+  return api.put('/projects/update', project);
+};
+
+/**
+ * 删除科研项目
+ * @param {Number} id - 项目ID
+ * @returns {Promise}
+ */
+export const deleteResearchProject = (id) => {
+  return api.delete(`/projects/${id}`);
+};
+
 // 导出api实例
 export default api; 

@@ -35,11 +35,16 @@ export const isAdmin = () => {
   return hasRole('admin');
 };
 
-// 登录并保存用户信息和令牌
+// 登录并保存用户信息和令牌，user中就是所有信息，好像不需要单独存储teacherID了
 export const login = (loginData) => {
   localStorage.setItem('user', JSON.stringify(loginData));
   localStorage.setItem('token', loginData.token);
   localStorage.setItem('isLoggedIn', 'true');
+
+  // 单独存储teacherId（如果存在）
+  if (loginData.teacherId) {
+    localStorage.setItem('teacherId', loginData.teacherId);
+  }
 };
 
 // 登出
