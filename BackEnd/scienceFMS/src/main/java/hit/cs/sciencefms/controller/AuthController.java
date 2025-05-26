@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin // 允许跨域请求
 public class AuthController {
     
     @Autowired

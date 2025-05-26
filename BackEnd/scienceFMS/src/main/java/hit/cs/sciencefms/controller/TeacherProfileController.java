@@ -15,7 +15,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/teacher/profile")
 @RequiredArgsConstructor
-@CrossOrigin // 允许跨域请求
 public class TeacherProfileController {
     
     private final TeacherProfileService teacherProfileService;

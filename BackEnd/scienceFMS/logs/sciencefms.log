@@ -473,3 +473,192 @@
 2025-05-26 15:57:26.945 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-05-26 15:57:26.945 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2025-05-26 15:57:26.946 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 16:01:36.755 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 35340 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-26 16:01:36.756 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-26 16:01:36.757 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 16:01:37.423 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-26 16:01:37.430 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 16:01:37.430 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-26 16:01:37.481 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 16:01:37.481 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 687 ms
+2025-05-26 16:01:37.557 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-26 16:01:37.877 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-26 16:01:38.029 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-26 16:01:38.036 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.61 seconds (process running for 1.961)
+2025-05-26 16:01:56.159 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 16:01:56.160 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 16:01:56.161 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 16:01:56.258 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:01:56.292 [http-nio-8082-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @4d5d943d
+2025-05-26 16:01:56.303 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 16:01:56.647 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71a87a9
+2025-05-26 16:01:56.648 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 16:01:56.654 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:01:56.662 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:01:56.708 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:01:56.712 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:01:56.712 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:01:56.752 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:06:17.065 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 16:06:17.069 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 16:06:21.692 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 31416 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-26 16:06:21.693 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-26 16:06:21.694 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 16:06:22.340 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-26 16:06:22.348 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 16:06:22.348 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-26 16:06:22.402 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 16:06:22.402 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 680 ms
+2025-05-26 16:06:22.467 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-26 16:06:22.763 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-26 16:06:22.923 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-26 16:06:22.929 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.533 seconds (process running for 1.857)
+2025-05-26 16:06:34.657 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 16:06:34.657 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 16:06:34.658 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-26 16:06:34.747 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:06:34.789 [http-nio-8082-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @4d5d943d
+2025-05-26 16:06:34.801 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 16:06:35.262 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b576f54
+2025-05-26 16:06:35.263 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 16:06:35.268 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:06:35.278 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:06:35.327 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:06:35.331 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:06:35.332 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:06:35.362 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:09:06.770 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 16:09:06.772 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 16:09:09.852 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 34524 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-26 16:09:09.854 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-26 16:09:09.855 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 16:09:10.519 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-26 16:09:10.526 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 16:09:10.526 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-26 16:09:10.583 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 16:09:10.584 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 698 ms
+2025-05-26 16:09:10.664 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-26 16:09:10.991 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-26 16:09:11.192 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-26 16:09:11.199 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.657 seconds (process running for 1.977)
+2025-05-26 16:09:17.564 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 16:09:17.564 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 16:09:17.564 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 16:09:17.639 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:09:17.680 [http-nio-8082-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @4d5d943d
+2025-05-26 16:09:17.689 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 16:09:18.218 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e92fe7a
+2025-05-26 16:09:18.220 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 16:09:18.224 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:09:18.232 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:09:18.284 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:09:18.290 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:09:18.291 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:09:18.324 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:09:30.582 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 16:09:30.586 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 16:09:33.738 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 32432 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-26 16:09:33.740 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-26 16:09:33.740 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 16:09:34.366 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-26 16:09:34.373 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 16:09:34.373 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-26 16:09:34.424 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 16:09:34.424 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 651 ms
+2025-05-26 16:09:34.486 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-26 16:09:34.781 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-26 16:09:34.941 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-26 16:09:34.947 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.512 seconds (process running for 1.846)
+2025-05-26 16:09:38.123 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 16:09:38.124 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 16:09:38.124 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 16:09:38.205 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:09:38.236 [http-nio-8082-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @4d5d943d
+2025-05-26 16:09:38.245 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 16:09:38.797 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ca3e773
+2025-05-26 16:09:38.798 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 16:09:38.802 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:09:38.810 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:09:38.863 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:09:38.867 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:09:38.867 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:09:38.909 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:17:08.737 [http-nio-8082-exec-5] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-26 16:17:26.781 [http-nio-8082-exec-6] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-26 16:17:28.951 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:17:29.215 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:17:29.216 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:17:29.600 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:17:29.601 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:17:29.601 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:17:29.821 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:17:40.508 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:17:40.510 [http-nio-8082-exec-8] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: hit.cs.sciencefms.controller.TeacherProfileController
+2025-05-26 16:18:36.853 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:18:37.704 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:18:50.785 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:18:50.942 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:18:50.942 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-26 16:18:51.130 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:18:51.131 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:18:51.132 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-26 16:18:51.233 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 16:22:24.380 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:22:24.463 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:22:24.464 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-26 16:22:24.512 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:22:24.513 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:22:24.513 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-26 16:22:24.573 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 16:22:25.312 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:22:25.349 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:22:25.349 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-26 16:22:25.381 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:22:25.382 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:22:25.382 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-26 16:22:25.431 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 16:25:53.628 [http-nio-8082-exec-1] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: Malformed JWT JSON: Ș[Ȏ���LL��
+2025-05-26 16:25:59.244 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:25:59.311 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:25:59.311 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-26 16:25:59.402 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:25:59.403 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:25:59.403 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-26 16:25:59.490 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-26 16:32:11.878 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-26 16:32:11.880 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-26 16:32:14.790 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 35704 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-26 16:32:14.791 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-26 16:32:14.793 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 16:32:15.439 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-26 16:32:15.446 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 16:32:15.446 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-26 16:32:15.495 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 16:32:15.496 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 674 ms
+2025-05-26 16:32:15.558 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-26 16:32:15.853 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-26 16:32:16.017 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-26 16:32:16.023 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.527 seconds (process running for 1.849)
+2025-05-26 16:32:20.925 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-26 16:32:20.925 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-26 16:32:20.926 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-26 16:32:20.994 [http-nio-8082-exec-3] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-26 16:32:55.720 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-05-26 16:32:55.807 [http-nio-8082-exec-5] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @4d5d943d
+2025-05-26 16:32:55.834 [http-nio-8082-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-26 16:32:56.362 [http-nio-8082-exec-5] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77d80f7b
+2025-05-26 16:32:56.366 [http-nio-8082-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-26 16:32:56.379 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-26 16:32:56.404 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-05-26 16:32:56.470 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-26 16:32:56.478 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-26 16:32:56.478 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-05-26 16:32:56.509 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-26 16:32:56.612 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-26 16:32:56.618 [http-nio-8082-exec-6] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: hit.cs.sciencefms.controller.TeacherProfileController
+2025-05-26 16:32:56.620 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-26 16:32:56.621 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-26 16:32:56.671 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-26 16:32:56.673 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-26 16:32:56.678 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-26 16:32:56.723 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3

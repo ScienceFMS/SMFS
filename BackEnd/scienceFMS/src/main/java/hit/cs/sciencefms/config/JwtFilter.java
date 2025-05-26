@@ -32,7 +32,6 @@ public class JwtFilter extends OncePerRequestFilter {
     private static final List<String> EXCLUDE_PATHS = Arrays.asList(
             "/auth/login",
             "/auth/register",
-//            "/teacher/profile/me",
             "/swagger-ui/**",
             "/v3/api-docs/**",
             "/error",
@@ -55,6 +54,17 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
+
+        // 问题竟然出现在预检OPTION上，因为OPTIONS请求不会携带token，然后不通过浏览器就认为是跨域问题，直接不发送
+        // 我的请求，还报错是跨域问题，这不是坑人吗。
+
+
+        // 对于OPTIONS请求，直接放行
+        if ("OPTIONS".equals(request.getMethod())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
         
         String path = request.getRequestURI();
         
