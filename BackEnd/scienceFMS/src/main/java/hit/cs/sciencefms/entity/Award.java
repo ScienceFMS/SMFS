@@ -48,7 +48,7 @@ public class Award {
     private String certificateImage;
     
     /**
-     * 相关项目ID
+     * 相关项目ID，这一项我们先不考虑，因为教师录入的时候，可能没有相关项目，所以先不考虑
      */
     private Long relatedProjectId;
     

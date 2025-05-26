@@ -156,5 +156,71 @@ export const deleteResearchProject = (id) => {
   return api.delete(`/projects/${id}`);
 };
 
+/**
+ * 获取教师的获奖信息列表（分页）
+ * @param {Number} teacherId - 教师ID
+ * @param {Number} page - 页码
+ * @param {Number} pageSize - 每页条数
+ * @param {Number} year - 年份筛选（可选）
+ * @param {String} keyword - 关键词搜索（可选）
+ * @returns {Promise}
+ */
+export const getAwardsByPage = (teacherId, page, pageSize, year, keyword) => {
+  return api.get('/awards/page', { 
+    params: { 
+      teacherId, 
+      page, 
+      pageSize, 
+      year: year || undefined,
+      keyword: keyword || undefined 
+    } 
+  });
+};
+
+/**
+ * 获取单个获奖信息详情
+ * @param {Number} id - 获奖ID
+ * @returns {Promise}
+ */
+export const getAwardById = (id) => {
+  return api.get(`/awards/${id}`);
+};
+
+/**
+ * 添加获奖信息
+ * @param {Object} award - 获奖信息
+ * @returns {Promise}
+ */
+export const addAward = (award) => {
+  return api.post('/awards', award);
+};
+
+/**
+ * 更新获奖信息
+ * @param {Object} award - 获奖信息
+ * @returns {Promise}
+ */
+export const updateAward = (award) => {
+  return api.put('/awards', award);
+};
+
+/**
+ * 删除获奖信息
+ * @param {Number} id - 获奖ID
+ * @returns {Promise}
+ */
+export const deleteAward = (id) => {
+  return api.delete(`/awards/${id}`);
+};
+
+/**
+ * 导出获奖信息为PDF
+ * @param {Number} id - 获奖ID
+ * @returns {Promise}
+ */
+export const exportAwardToPdf = (id) => {
+  return api.get(`/awards/export/${id}`);
+};
+
 // 导出api实例
 export default api; 
