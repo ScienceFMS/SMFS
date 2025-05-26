@@ -160,7 +160,7 @@ const logout = () => {
 .right-container {
   flex: 1;
   display: flex;
-  margin-left: 150px;
+  margin-left: 190px;
   flex-direction: column;
 }
 
