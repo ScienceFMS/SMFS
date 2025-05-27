@@ -310,5 +310,103 @@ export const exportIntellectualProperties = (params) => {
   });
 };
 
+/**
+ * 出访记录相关API
+ */
+
+/**
+ * 获取教师的出访记录列表（分页）
+ * @param {Object} params - 查询参数
+ * @returns {Promise}
+ */
+export const getVisitRecords = (params) => {
+  return api.get('/visits/page', { params });
+};
+
+/**
+ * 获取单个出访记录
+ * @param {Number} id - 出访记录ID
+ * @returns {Promise}
+ */
+export const getVisitRecordById = (id) => {
+  return api.get(`/visits/${id}`);
+};
+
+/**
+ * 添加出访记录
+ * @param {Object} data - 出访记录数据
+ * @returns {Promise}
+ */
+export const addVisitRecord = (data) => {
+  return api.post('/visits', data);
+};
+
+/**
+ * 更新出访记录
+ * @param {Object} data - 出访记录数据
+ * @returns {Promise}
+ */
+export const updateVisitRecord = (data) => {
+  return api.put('/visits', data);
+};
+
+/**
+ * 删除出访记录
+ * @param {Number} id - 出访记录ID
+ * @returns {Promise}
+ */
+export const deleteVisitRecord = (id) => {
+  return api.delete(`/visits/${id}`);
+};
+
+/**
+ * 上传行程单文件
+ * @param {FormData} formData - 包含文件的表单数据
+ * @returns {Promise}
+ */
+export const uploadItineraryFile = (formData) => {
+  return api.post('/visits/upload/itinerary', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+};
+
+/**
+ * 上传成果报告文件
+ * @param {FormData} formData - 包含文件的表单数据
+ * @returns {Promise}
+ */
+export const uploadReportFile = (formData) => {
+  return api.post('/visits/upload/report', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+};
+
+/**
+ * 获取出访记录年度统计
+ * @param {Number} teacherId - 教师ID
+ * @param {Number} year - 年份
+ * @returns {Promise}
+ */
+export const getVisitYearlyStats = (teacherId, year) => {
+  return api.get('/visits/stats/year', {
+    params: { teacherId, year }
+  });
+};
+
+/**
+ * 获取报销模板
+ * @param {Number} id - 出访记录ID
+ * @returns {Promise}
+ */
+export const getReimbursementTemplate = (id) => {
+  return api.get(`/visits/${id}/reimbursement-template`, {
+    responseType: 'blob'
+  });
+};
+
 // 导出api实例
 export default api; 
