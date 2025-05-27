@@ -1210,3 +1210,25 @@ org.postgresql.util.PSQLException: ERROR: function year(date) does not exist
 2025-05-27 20:10:11.584 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
 2025-05-27 20:10:11.585 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
 2025-05-27 20:10:11.810 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-27 20:11:58.435 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:11:58.687 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-27 20:11:58.689 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-27 20:11:58.731 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-27 20:11:58.731 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-27 20:11:58.733 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-27 20:11:58.866 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-27 20:12:37.215 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:12:37.592 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-05-27 20:12:37.592 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-05-27 20:12:37.814 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-05-27 20:12:37.814 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-05-27 20:12:37.814 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-05-27 20:12:37.934 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-05-27 20:14:21.303 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: admin1
+2025-05-27 20:14:21.666 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-27 20:14:21.667 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: admin1(String)
+2025-05-27 20:14:21.958 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-27 20:14:21.958 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-27 20:14:21.958 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: admin1(String)
+2025-05-27 20:14:22.742 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-27 20:14:22.743 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4xIiwiaWF0IjoxNzQ4MzQ4MDYyLCJleHAiOjE3NDg0MzQ0NjJ9.gzccAam6Ak7K0zLWP75XX6m1QZVPz1cFAlUoIQjLMpj-rb_Ony2qxPR4Rne-g4PGWkdWbZXasJeuc1yZ93KLtA
