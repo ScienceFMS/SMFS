@@ -253,5 +253,62 @@ export const exportAwardToPdf = (id) => {
   return api.get(`/awards/export/${id}`);
 };
 
+/**
+ * 获取教师的知识产权列表（分页）
+ * @param {Object} params - 查询参数，包含teacherId、page、pageSize、type、keyword等
+ * @returns {Promise}
+ */
+export const getIntellectualProperties = (params) => {
+  return api.get('/intellectual-property/page', { params });
+};
+
+/**
+ * 获取单个知识产权详情
+ * @param {Number} id - 知识产权ID
+ * @returns {Promise}
+ */
+export const getIntellectualPropertyById = (id) => {
+  return api.get(`/intellectual-property/${id}`);
+};
+
+/**
+ * 添加知识产权
+ * @param {Object} property - 知识产权信息
+ * @returns {Promise}
+ */
+export const addIntellectualProperty = (property) => {
+  return api.post('/intellectual-property', property);
+};
+
+/**
+ * 更新知识产权
+ * @param {Object} property - 知识产权信息
+ * @returns {Promise}
+ */
+export const updateIntellectualProperty = (property) => {
+  return api.put('/intellectual-property', property);
+};
+
+/**
+ * 删除知识产权
+ * @param {Number} id - 知识产权ID
+ * @returns {Promise}
+ */
+export const deleteIntellectualProperty = (id) => {
+  return api.delete(`/intellectual-property/${id}`);
+};
+
+/**
+ * 批量导出知识产权列表
+ * @param {Object} params - 导出参数，可包含筛选条件
+ * @returns {Promise}
+ */
+export const exportIntellectualProperties = (params) => {
+  return api.get('/intellectual-property/export', { 
+    params,
+    responseType: 'blob'  // 指定响应类型为blob
+  });
+};
+
 // 导出api实例
 export default api; 
