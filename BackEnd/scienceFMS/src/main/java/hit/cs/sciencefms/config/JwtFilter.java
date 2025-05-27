@@ -56,10 +56,10 @@ public class JwtFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
 
+        /* 这里其实不用了，因为CorsFilter已经处理了OPTIONS请求 */
         // 问题竟然出现在预检OPTION上，因为OPTIONS请求不会携带token，然后不通过浏览器就认为是跨域问题，直接不发送
         // 我的请求，还报错是跨域问题，这不是坑人吗。
-
-
+        // 
         // 对于OPTIONS请求，直接放行
         if ("OPTIONS".equals(request.getMethod())) {
             filterChain.doFilter(request, response);

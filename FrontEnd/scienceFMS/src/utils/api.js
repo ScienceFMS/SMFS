@@ -35,16 +35,27 @@ api.interceptors.response.use(
     return response.data;
   },
   error => {
+    // 检查是否有响应对象
     if (error.response) {
+      console.log('API错误响应:', error.response);
+      
+      // 处理401错误（未授权/token过期）
+      if (error.response.status === 401) {
+        console.log('检测到401未授权错误，正在清除凭证并跳转到登录页面');
+        // 清除所有认证相关信息
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('isLoggedIn');
+        
+        // 延迟执行跳转，确保消息能够显示
+        setTimeout(() => {
+          window.location.href = '/login'; // 使用window.location强制跳转，避免路由问题
+        }, 100);
+        return Promise.reject(new Error('登录已过期，请重新登录'));
+      }
+      
+      // 处理其他HTTP错误
       switch (error.response.status) {
-        case 401: // 未授权
-          // 清除token和用户信息
-          localStorage.removeItem('token');
-          localStorage.removeItem('user');
-          localStorage.removeItem('isLoggedIn');
-          // 重定向到登录页
-          router.push('/login');
-          break;
         case 403: // 禁止访问
           console.error('没有权限访问该资源');
           break;
@@ -54,8 +65,28 @@ api.interceptors.response.use(
         default:
           console.error(`请求错误: ${error.response.status}`);
       }
+    } else if (error.request) {
+      // 请求已发出但没有收到响应
+      console.error('未收到响应，可能是网络问题或CORS错误', error.request);
+      
+      // 检查错误消息是否包含401相关内容
+      if (error.message && (
+          error.message.includes('401') || 
+          error.message.includes('unauthorized') || 
+          error.message.includes('Unauthorized')
+      )) {
+        console.log('检测到可能的401错误，正在清除凭证并跳转到登录页面');
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('isLoggedIn');
+        
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 100);
+      }
     } else {
-      console.error('网络错误，请检查您的网络连接');
+      // 请求设置触发的错误
+      console.error('请求错误:', error.message);
     }
     return Promise.reject(error);
   }

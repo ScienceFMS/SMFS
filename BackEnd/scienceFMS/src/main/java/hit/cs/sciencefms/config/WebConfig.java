@@ -17,6 +17,21 @@ public class WebConfig implements WebMvcConfigurer {
     @Autowired
     private JwtFilter jwtFilter;
     
+    @Autowired
+    private CorsFilter corsFilter;
+    
+    /**
+     * 注册CORS过滤器，确保它在JWT过滤器之前执行
+     */
+    @Bean
+    public FilterRegistrationBean<CorsFilter> corsFilterRegistration() {
+        FilterRegistrationBean<CorsFilter> registration = new FilterRegistrationBean<>();
+        registration.setFilter(corsFilter);
+        registration.addUrlPatterns("/*");
+        registration.setOrder(Ordered.HIGHEST_PRECEDENCE); // 优先级值越小，优先级越高，Ordered.HIGHEST_PRECEDENCE是最小的整数
+        return registration;
+    }
+    
     /**
      * 注册JWT过滤器，应用到所有需要登录验证的URLs
      */
@@ -37,7 +52,8 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:5173")  // 指定前端域名，不能与allowCredentials=true同时使用通配符
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*")
+                .allowedHeaders("Authorization", "Content-Type", "X-Requested-With")
+                .exposedHeaders("Authorization")
                 .allowCredentials(true)  // 允许发送cookie
                 .maxAge(3600);
     }
