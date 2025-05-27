@@ -25,35 +25,37 @@ public class IntellectualProperty {
     /**
      * 名称
      */
-    private String name;
+    private String title;
     
     /**
-     * 类型(专利/著作权)
+     * 类型(专利/著作权) PATENT/COPYRIGHT
      */
     private String type;
     
     /**
      * 子类型(如发明专利、实用新型专利等)
+     * // 专利时：发明/实用新型/外观设计  
+     * // 著作权时：文字/软件/美术等
      */
     private String subtype;
     
     /**
-     * 授权号
+     * 登记/授权号（通用化命名）
      */
     private String authNumber;
     
     /**
-     * 申请日期
+     * 申请日期（专利=申请日，著作权=登记日，非必填）
      */
     private LocalDate applyDate;
     
     /**
-     * 授权日期
+     * 授权日期（专利=授权日，著作权=登记日，非必填）
      */
     private LocalDate authDate;
     
     /**
-     * 发明人排名
+     * 发明人排名（专利时，发明人排名，非必填）
      */
     private Integer inventorRank;
     
