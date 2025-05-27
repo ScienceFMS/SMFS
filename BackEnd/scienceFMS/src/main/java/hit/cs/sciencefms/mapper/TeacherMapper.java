@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * 教师Mapper接口
+ * 教师表 Mapper 接口
  */
 @Mapper
 public interface TeacherMapper extends BaseMapper<Teacher> {

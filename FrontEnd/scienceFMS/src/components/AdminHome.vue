@@ -9,25 +9,57 @@
     </header>
     
     <div class="content">
-      <h2>科研成果管理系统 - 管理员页面</h2>
-      <p>这里是系统管理功能区域</p>
+      <div class="tabs">
+        <div 
+          class="tab" 
+          :class="{ active: activeTab === 'dashboard' }"
+          @click="setActiveTab('dashboard')"
+        >
+          系统概览
+        </div>
+        <div 
+          class="tab" 
+          :class="{ active: activeTab === 'search' }"
+          @click="setActiveTab('search')"
+        >
+          多维查询
+        </div>
+        <div 
+          class="tab" 
+          :class="{ active: activeTab === 'users' }"
+          @click="setActiveTab('users')"
+        >
+          用户管理
+        </div>
+        <div 
+          class="tab" 
+          :class="{ active: activeTab === 'settings' }"
+          @click="setActiveTab('settings')"
+        >
+          系统设置
+        </div>
+      </div>
       
-      <div class="features">
-        <div class="feature-card">
-          <h3>用户管理</h3>
-          <p>管理系统用户账号和权限</p>
-        </div>
-        <div class="feature-card">
-          <h3>科研成果管理</h3>
-          <p>查看和管理所有用户科研成果</p>
-        </div>
-        <div class="feature-card">
-          <h3>统计报表</h3>
-          <p>查看系统全局统计数据和报表</p>
-        </div>
-        <div class="feature-card">
-          <h3>系统设置</h3>
-          <p>配置系统参数和权限规则</p>
+      <!-- 系统概览 -->
+      <div v-if="activeTab === 'dashboard'" class="tab-content">
+        <admin-dashboard />
+      </div>
+      
+      <!-- 多维查询 -->
+      <div v-if="activeTab === 'search'" class="tab-content">
+        <admin-multi-search />
+      </div>
+      
+      <!-- 用户管理 -->
+      <div v-if="activeTab === 'users'" class="tab-content">
+        <admin-user-management />
+      </div>
+      
+      <!-- 系统设置 -->
+      <div v-if="activeTab === 'settings'" class="tab-content">
+        <div class="settings-container">
+          <h2>系统设置</h2>
+          <p>系统设置功能待实现...</p>
         </div>
       </div>
     </div>
@@ -35,20 +67,37 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, onMounted, watch } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import * as auth from '../utils/auth';
+import AdminDashboard from './admin/AdminDashboard.vue';
+import AdminMultiSearch from './admin/AdminMultiSearch.vue';
+import AdminUserManagement from './admin/AdminUserManagement.vue';
 
 const router = useRouter();
+const route = useRoute();
 const username = ref('');
+const activeTab = ref('dashboard');
 
+// 从路由参数中获取初始activeTab
 onMounted(() => {
   const user = auth.getCurrentUser();
   if (user) {
     username.value = user.username;
   }
+  
+  // 如果路由中有参数，设置对应的标签页
+  if (route.params.activeTab) {
+    setActiveTab(route.params.activeTab);
+  }
 });
 
+// 设置当前活动标签
+const setActiveTab = (tab) => {
+  activeTab.value = tab;
+};
+
+// 登出
 const logout = () => {
   auth.logout();
   router.push('/login');
@@ -107,29 +156,37 @@ h2 {
   color: #333;
 }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+/* 标签页相关样式 */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
-.feature-card {
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  color: #1890ff;
+  border-bottom: 2px solid #1890ff;
+}
+
+.tab:hover:not(.active) {
+  color: #40a9ff;
+}
+
+.tab-content {
+  margin-bottom: 30px;
+}
+
+.settings-container {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #1890ff;
 }
 </style> 

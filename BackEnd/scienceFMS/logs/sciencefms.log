@@ -1232,3 +1232,518 @@ org.postgresql.util.PSQLException: ERROR: function year(date) does not exist
 2025-05-27 20:14:21.958 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: admin1(String)
 2025-05-27 20:14:22.742 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
 2025-05-27 20:14:22.743 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4xIiwiaWF0IjoxNzQ4MzQ4MDYyLCJleHAiOjE3NDg0MzQ0NjJ9.gzccAam6Ak7K0zLWP75XX6m1QZVPz1cFAlUoIQjLMpj-rb_Ony2qxPR4Rne-g4PGWkdWbZXasJeuc1yZ93KLtA
+2025-05-27 20:55:39.349 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:10.360 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:40.392 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:53.433 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:53.989 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:54.620 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:55.333 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:55.637 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:57.737 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:56:58.070 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:57:00.015 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:57:03.030 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:57:03.941 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:57:04.371 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 20:57:05.111 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:00:56.071 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:02:32.199 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:03:29.763 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:03:30.024 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:05:02.714 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:06:43.081 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:09:01.691 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:09:57.588 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:09:58.501 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:10:01.141 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:10:01.482 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:10:01.837 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:10:16.830 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:10:22.642 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:12:33.269 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 21:12:33.272 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 21:12:39.262 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 38276 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-27 21:12:39.264 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-27 21:12:39.264 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 21:12:40.380 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-27 21:12:40.387 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 21:12:40.387 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-27 21:12:40.457 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 21:12:40.457 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1159 ms
+2025-05-27 21:12:40.553 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-27 21:12:41.051 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-27 21:12:41.194 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-27 21:12:41.201 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 2.263 seconds (process running for 2.625)
+2025-05-27 21:12:42.135 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 21:12:42.135 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 21:12:42.136 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-27 21:12:42.183 [http-nio-8082-exec-1] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:42.531 [http-nio-8082-exec-3] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:44.631 [http-nio-8082-exec-2] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:45.896 [http-nio-8082-exec-4] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:47.553 [http-nio-8082-exec-5] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:50.275 [http-nio-8082-exec-6] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:12:57.264 [http-nio-8082-exec-7] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:13:19.364 [http-nio-8082-exec-8] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-05-27 21:14:07.593 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: admin1
+2025-05-27 21:14:07.650 [http-nio-8082-exec-9] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @34123d65
+2025-05-27 21:14:07.667 [http-nio-8082-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 21:14:08.040 [http-nio-8082-exec-9] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cfb8a8b
+2025-05-27 21:14:08.042 [http-nio-8082-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 21:14:08.051 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-27 21:14:08.069 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: admin1(String)
+2025-05-27 21:14:08.115 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-27 21:14:08.127 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = login_fail_count + 1 WHERE username = ?
+2025-05-27 21:14:08.127 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - ==> Parameters: admin1(String)
+2025-05-27 21:14:08.169 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - <==    Updates: 1
+2025-05-27 21:14:08.170 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-27 21:14:08.170 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: admin1(String)
+2025-05-27 21:14:08.205 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-27 21:14:12.240 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 21:14:12.240 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 21:14:14.129 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 24100 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-05-27 21:14:14.131 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-05-27 21:14:14.132 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 21:14:14.773 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-05-27 21:14:14.789 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 21:14:14.789 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-05-27 21:14:14.847 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 21:14:14.847 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 688 ms
+2025-05-27 21:14:14.917 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-05-27 21:14:15.350 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-05-27 21:14:15.472 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-05-27 21:14:15.478 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 1.65 seconds (process running for 2.029)
+2025-05-27 21:14:18.941 [http-nio-8082-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 21:14:18.941 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 21:14:18.942 [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-27 21:14:18.994 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: admin1
+2025-05-27 21:14:19.025 [http-nio-8082-exec-2] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @34123d65
+2025-05-27 21:14:19.034 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 21:14:20.967 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a324595
+2025-05-27 21:14:20.969 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 21:14:20.974 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-05-27 21:14:20.983 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: admin1(String)
+2025-05-27 21:14:21.053 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-05-27 21:14:21.057 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-05-27 21:14:21.058 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: admin1(String)
+2025-05-27 21:14:21.088 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-05-27 21:14:21.109 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4xIiwiaWF0IjoxNzQ4MzUxNjYxLCJleHAiOjE3NDg0MzgwNjF9.Ccv4SBz_xRbYHagzF6j2crnEwkG6B5_fIptb2MrskgQUmzelg2TQE_vQfDbwXwLARkNPGzGuGbk4Af4jS05VZQ
+2025-05-27 21:14:21.158 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:14:22.279 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:14:22.355 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:14:22.356 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:14:22.420 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:15:03.915 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:08.517 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:08.548 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:15:08.548 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:15:08.582 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:15:34.645 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:35.001 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:35.032 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:15:35.033 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:15:35.068 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:15:38.590 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:39.739 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:39.768 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:15:39.768 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:15:39.815 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:15:46.552 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:46.612 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:15:46.612 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:46.652 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:15:46.656 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:46.658 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:15:46.697 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:46.698 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:46.698 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:15:46.733 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:46.734 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:15:46.734 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:46.771 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:15:46.775 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:15:46.776 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:46.808 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:15:46.808 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:46.809 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:15:46.846 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:55.445 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:55.481 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:15:55.482 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:55.519 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:15:55.520 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:55.520 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:15:55.561 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:55.564 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:55.564 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:15:55.625 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:55.628 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:15:55.629 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:55.660 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:15:55.662 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:15:55.663 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:55.703 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:15:55.704 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:55.705 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:15:55.738 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:56.496 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:56.538 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:15:56.539 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:56.570 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:15:56.571 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:56.572 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:15:56.609 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:56.610 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:56.610 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:15:56.653 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:56.654 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:15:56.655 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:56.692 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:15:56.695 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:15:56.696 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:56.772 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:15:56.772 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:56.772 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:15:56.824 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:59.840 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:15:59.879 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:15:59.879 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:15:59.923 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:15:59.924 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:59.925 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:15:59.957 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:59.957 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:15:59.958 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:15:59.989 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:15:59.991 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:15:59.991 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:16:00.022 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:16:00.023 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:16:00.023 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:16:00.051 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:16:04.642 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:16:06.769 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:16:06.800 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:16:06.800 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:16:06.830 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:16:08.801 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:16:08.831 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:16:08.832 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:16:08.869 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:16:08.870 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:16:08.870 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:16:08.908 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:16:08.909 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:16:08.910 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:16:08.944 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:16:08.945 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:16:08.946 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:16:08.975 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:16:08.977 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:16:08.978 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:16:09.007 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:16:09.008 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:16:09.008 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:16:09.061 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:22:01.288 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:22:01.323 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)) AND (title LIKE ? OR type LIKE ? OR subtype LIKE ? OR auth_number LIKE ?))
+2025-05-27 21:22:01.324 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), %计算%(String), %计算%(String), %计算%(String), %计算%(String)
+2025-05-27 21:22:01.377 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 1
+2025-05-27 21:22:01.378 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:22:01.379 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:22:01.420 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:22:01.424 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ? AND (award_name LIKE ? OR award_level LIKE ? OR issuing_unit LIKE ?))
+2025-05-27 21:22:01.425 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), %计算%(String), %计算%(String), %计算%(String)
+2025-05-27 21:22:01.482 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 0
+2025-05-27 21:22:01.484 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)) AND (project_name LIKE ? OR project_code LIKE ? OR source LIKE ? OR role LIKE ?))
+2025-05-27 21:22:01.485 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), %计算%(String), %计算%(String), %计算%(String), %计算%(String)
+2025-05-27 21:22:01.519 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 0
+2025-05-27 21:23:53.610 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:27:20.661 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:27:20.699 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:27:20.700 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:27:20.730 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:32:25.220 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:25.255 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:32:25.256 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:25.289 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:32:25.290 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:25.290 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:32:25.337 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:25.338 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:25.338 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:32:25.366 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:25.368 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:32:25.370 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:25.403 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:32:25.404 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:32:25.404 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:25.434 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:32:25.434 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:25.434 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:32:25.463 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:31.985 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:32.035 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:32:32.036 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:32.065 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:32:32.065 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:32.066 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:32:32.160 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:32.160 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:32.160 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:32:32.200 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:32.200 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:32:32.201 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:32.232 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:32:32.234 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:32:32.234 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:32.276 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:32:32.277 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:32.277 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:32:32.314 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:33.997 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:34.063 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:32:34.064 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:34.099 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:32:34.100 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:34.100 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:32:34.198 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:34.198 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:34.198 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:32:34.295 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:34.295 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:32:34.296 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:34.325 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:32:34.327 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:32:34.327 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:34.373 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:32:34.373 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:34.373 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:32:34.403 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:36.035 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:36.064 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:32:36.065 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:36.097 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:32:36.097 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:36.098 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:32:36.127 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:36.128 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:36.128 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:32:36.161 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:36.162 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:32:36.162 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:36.195 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:32:36.198 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:32:36.198 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:36.230 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:32:36.230 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:36.230 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:32:36.259 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:38.567 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:40.424 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:40.462 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:32:40.462 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:32:40.491 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:32:41.602 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:32:41.637 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:32:41.638 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:41.667 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:32:41.667 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:41.668 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:32:41.699 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:41.699 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:41.699 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:32:41.731 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:32:41.732 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:32:41.732 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:41.769 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:32:41.771 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:32:41.771 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:32:41.799 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:32:41.800 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:32:41.800 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:32:41.843 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:36:24.947 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:36:24.979 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:36:24.979 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:36:25.009 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:36:25.010 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:36:25.010 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:36:25.044 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:36:25.045 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:36:25.046 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:36:25.076 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:36:25.077 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:36:25.077 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:36:25.108 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:36:25.108 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:36:25.109 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:36:25.148 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:36:25.148 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:36:25.148 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:36:25.179 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:36:58.395 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:36:59.695 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:36:59.724 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:36:59.724 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:36:59.781 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:03.154 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:07.796 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:07.849 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:07.849 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:07.877 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:10.850 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:11.355 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:11.386 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:11.386 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:11.440 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:12.472 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:12.880 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:12.912 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:12.912 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:12.940 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:14.025 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:14.810 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:14.866 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:14.866 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:14.924 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:15.566 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:16.171 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:16.203 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:16.203 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:16.234 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:18.378 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:18.996 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:19.033 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:19.033 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:19.067 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:39.992 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:49.681 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:53.126 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:53.155 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:53.155 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:53.183 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:55.832 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:58.264 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:37:58.294 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:37:58.294 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:37:58.323 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:37:59.510 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:38:00.047 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:38:00.089 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:38:00.089 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:38:00.117 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:45:41.426 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:45:41.474 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:45:41.475 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:45:41.508 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:45:56.222 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:45:56.272 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:45:56.273 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:45:56.299 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:45:56.300 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:45:56.300 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:45:56.349 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:45:56.349 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:45:56.349 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:45:56.673 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:45:56.674 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:45:56.674 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:45:56.809 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:45:56.810 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:45:56.810 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:45:56.911 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:45:56.912 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:45:56.912 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:45:56.950 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:58:08.571 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:58:08.624 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:58:08.624 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:58:08.664 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:58:43.204 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:58:43.234 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:58:43.234 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:58:43.261 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:58:43.263 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:58:43.263 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:58:43.291 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:58:43.292 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:58:43.292 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:58:43.320 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:58:43.322 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:58:43.322 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:58:43.387 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:58:43.390 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:58:43.391 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:58:43.439 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:58:43.439 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:58:43.439 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:58:43.465 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:06.767 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:06.811 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:59:06.811 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:06.844 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:59:06.845 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:06.845 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:59:06.922 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:06.922 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:06.922 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:59:06.952 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:06.954 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:59:06.954 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:06.995 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:59:06.996 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:59:06.996 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:07.046 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:59:07.046 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:07.046 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:59:07.091 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:08.224 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:08.252 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:59:08.253 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:08.283 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:59:08.284 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:08.284 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:59:08.312 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:08.313 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:08.313 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:59:08.342 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:08.344 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:59:08.344 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:08.370 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:59:08.371 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:59:08.371 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:08.398 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:59:08.398 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:08.399 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:59:08.425 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:10.446 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:10.473 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (((auth_date BETWEEN ? AND ? OR apply_date BETWEEN ? AND ?)))
+2025-05-27 21:59:10.473 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:10.500 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectList - <==      Total: 2
+2025-05-27 21:59:10.501 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:10.501 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 3(Long)
+2025-05-27 21:59:10.529 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:10.529 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:10.529 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-05-27 21:59:10.555 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:10.556 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (award_date BETWEEN ? AND ?)
+2025-05-27 21:59:10.557 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:10.583 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectList - <==      Total: 3
+2025-05-27 21:59:10.585 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (((start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? OR start_date <= ? AND end_date >= ?)))
+2025-05-27 21:59:10.585 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - ==> Parameters: 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate), 2023-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-05-27 21:59:10.612 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.ResearchProjectMapper.selectList - <==      Total: 7
+2025-05-27 21:59:10.613 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-05-27 21:59:10.613 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 2(Long)
+2025-05-27 21:59:10.641 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-05-27 21:59:12.791 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:13.216 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:13.247 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:59:13.247 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:59:13.277 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
+2025-05-27 21:59:13.698 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:14.050 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-05-27 21:59:14.078 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0
+2025-05-27 21:59:14.078 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: 
+2025-05-27 21:59:14.107 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 3
