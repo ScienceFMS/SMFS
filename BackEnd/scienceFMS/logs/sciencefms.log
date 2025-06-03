@@ -171,3 +171,498 @@
 2025-06-03 15:28:10.402 [http-nio-8082-exec-3] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
 2025-06-03 15:28:10.425 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
 2025-06-03 15:28:10.449 [http-nio-8082-exec-3] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4
+2025-06-03 15:46:10.466 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:46:11.234 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 15:46:11.234 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 15:46:11.959 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 15:46:11.959 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 15:46:11.959 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 15:46:12.285 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 15:51:13.114 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:51:13.146 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 15:51:13.146 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 15:51:13.225 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 15:51:13.226 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 15:51:13.227 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 15:51:13.266 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:07:10.572 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:07:10.628 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:07:10.628 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:07:10.661 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:07:10.662 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:07:10.662 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:07:10.780 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:39:25.711 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-03 16:39:25.715 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-03 16:39:39.827 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 4608 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-06-03 16:39:39.827 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-06-03 16:39:39.828 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 16:39:41.296 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-06-03 16:39:41.303 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-03 16:39:41.303 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-06-03 16:39:41.359 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-03 16:39:41.359 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1504 ms
+2025-06-03 16:39:41.446 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-06-03 16:39:41.865 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-03 16:39:41.983 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-06-03 16:39:41.990 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 2.474 seconds (process running for 3.179)
+2025-06-03 16:44:55.942 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-03 16:44:55.942 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-03 16:44:55.946 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-06-03 16:44:56.008 [http-nio-8082-exec-5] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-06-03 16:45:21.168 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 16:45:21.196 [http-nio-8082-exec-10] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @34123d65
+2025-06-03 16:45:21.199 [http-nio-8082-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-03 16:45:21.571 [http-nio-8082-exec-10] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@282136b2
+2025-06-03 16:45:21.575 [http-nio-8082-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-03 16:45:21.579 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:45:21.588 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:45:21.689 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:45:21.693 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-03 16:45:21.693 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 16:45:21.745 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-03 16:45:21.755 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc0ODk0MDMyMSwiZXhwIjoxNzQ5MDI2NzIxfQ.DXa45Yaj4gcsqynk2pi3WQlMjPgLJzCa-Gi07tio1rbBDgjwC3_RsnWVb1W6NywnTS93m4ydATg7ki1RLs4Izw
+2025-06-03 16:45:21.756 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 16:45:21.757 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:45:21.794 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 16:45:21.855 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:45:21.860 [http-nio-8082-exec-3] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: hit.cs.sciencefms.controller.TeacherProfileController
+2025-06-03 16:45:21.862 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:45:21.863 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:45:21.892 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:45:21.893 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:45:21.893 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:45:21.949 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:45:23.618 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:45:23.670 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:45:23.671 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:45:23.711 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:45:23.711 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:45:23.711 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:45:23.752 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:45:41.610 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:45:41.612 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:45:41.636 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:45:41.636 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:45:41.673 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:45:41.678 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 16:45:41.678 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.com(String), 13911111111(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T16:45:41.673917(LocalDateTime), 2(Long)
+2025-06-03 16:45:41.704 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 16:45:52.836 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 16:45:52.874 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:45:52.874 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:45:52.904 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:45:52.905 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-03 16:45:52.905 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 16:45:52.934 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-03 16:45:52.935 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc0ODk0MDM1MiwiZXhwIjoxNzQ5MDI2NzUyfQ.9o61QfrpP-17BEFGWA4p7UZ86BW0UlDrvpS_wc90ufdG6F9sjMD-WJVwxVLVnHezJNObAkxJE81YAUQaE1ZJpw
+2025-06-03 16:45:52.936 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 16:45:52.936 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:45:52.983 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 16:45:53.030 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:45:53.032 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:45:53.032 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:45:53.083 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:45:53.083 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:45:53.083 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:45:53.107 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:46:08.802 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 16:46:08.820 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:46:08.820 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:46:08.868 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:46:08.868 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-03 16:46:08.868 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 16:46:08.904 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-03 16:46:08.906 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc0ODk0MDM2OCwiZXhwIjoxNzQ5MDI2NzY4fQ.1th7v-S8P1H5X-VfYKSt088NV_3Q-_U2rd06K9fw8z_UafeGgkb5sNaqjZqmWtDaNhxwMgZknq6bIvLG9Cf45w
+2025-06-03 16:46:08.908 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 16:46:08.908 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:46:08.947 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 16:46:09.007 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:46:09.009 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:46:09.009 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:46:09.078 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:46:09.078 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:46:09.078 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:46:09.103 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:46:19.937 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:46:19.998 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:46:19.998 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:46:20.037 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:46:20.039 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:46:20.039 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:46:20.072 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:46:41.661 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:46:41.768 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:46:41.768 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:46:41.832 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:46:41.833 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:46:41.833 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:46:41.860 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:47:07.270 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:47:07.304 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:47:07.304 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:47:07.330 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:47:07.331 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:47:07.331 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:47:07.357 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:47:31.857 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:47:31.893 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:47:31.893 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:47:31.920 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:47:31.921 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:47:31.921 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:47:31.950 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:48:06.521 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:48:06.521 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:48:06.557 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:48:06.557 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:48:06.588 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:48:57.940 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 16:48:57.967 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:48:57.968 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:48:57.999 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:48:58.001 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = login_fail_count + 1 WHERE username = ?
+2025-06-03 16:48:58.001 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 16:48:58.044 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.UserMapper.incrementLoginFailCount - <==    Updates: 1
+2025-06-03 16:48:58.047 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:48:58.049 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:48:58.104 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:49:00.905 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 16:49:00.934 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:49:00.935 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:49:00.978 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:49:00.979 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-03 16:49:00.979 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 16:49:01.022 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-03 16:49:01.024 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc0ODk0MDU0MSwiZXhwIjoxNzQ5MDI2OTQxfQ.gSXVS8HPZKnJ8puEsmZFtB50-IUngTreAGgwRnJlpDYeA2ZmTeqSgV5C-1otmvQTngweh88dJkFDxkxch70NBg
+2025-06-03 16:49:01.026 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 16:49:01.026 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:49:01.090 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 16:49:01.143 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:49:01.144 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:49:01.145 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:49:01.186 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:49:01.186 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:49:01.187 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:49:01.215 [http-nio-8082-exec-10] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:49:26.454 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:49:26.484 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:49:26.484 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:49:26.512 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:49:26.513 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:49:26.513 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:49:26.546 [http-nio-8082-exec-3] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:51:22.396 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:51:22.447 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:51:22.447 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:51:22.510 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:51:22.510 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:51:22.510 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:51:22.560 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:51:46.647 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:51:46.682 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:51:46.682 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:51:46.722 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:51:46.722 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:51:46.722 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:51:46.756 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:54:09.678 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:54:09.733 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:54:09.734 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:54:09.787 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:54:09.788 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:54:09.788 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:54:09.816 [http-nio-8082-exec-4] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:54:49.285 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:54:49.286 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:54:49.353 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:54:49.354 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:54:49.388 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:56:02.187 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:56:02.187 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:56:02.219 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:56:02.219 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:56:02.247 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:56:46.045 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:56:46.046 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:56:46.094 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:56:46.094 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:56:46.186 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:56:46.189 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 16:56:46.190 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 1234567(String), teacher(String), 张教授(String), zhang@example.com(String), 13911111111(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T16:56:46.186681300(LocalDateTime), 2(Long)
+2025-06-03 16:56:46.223 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 16:57:06.714 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:06.715 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:57:06.777 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:57:06.777 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:57:06.817 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:57:14.554 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:14.555 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:57:14.591 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:57:14.591 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:57:14.622 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:57:14.622 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 16:57:14.623 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 1234567(String), teacher(String), 张教授(String), zhang@example.com(String), 13911111111(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T16:57:14.622488(LocalDateTime), 2(Long)
+2025-06-03 16:57:14.662 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 16:57:42.763 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:42.840 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:57:42.840 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:57:42.887 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:57:42.887 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:57:42.887 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:57:42.929 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:57:43.048 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:43.049 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:43.058 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ? AND (start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? AND (start_date < ? AND end_date > ?)))
+2025-06-03 16:57:43.059 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==> Parameters: 1(Long), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-06-03 16:57:43.093 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
+2025-06-03 16:57:43.114 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_visit_record WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 16:57:43.114 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 16:57:43.153 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 16:57:43.157 [http-nio-8082-exec-4] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==>  Preparing: SELECT id,purpose,location,start_date,end_date,result,itinerary_file,report_file,reimbursement_status,reimbursement_amount,teacher_id,create_time,update_time,is_deleted FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY start_date DESC LIMIT ?
+2025-06-03 16:57:43.157 [http-nio-8082-exec-4] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 16:57:43.190 [http-nio-8082-exec-4] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4
+2025-06-03 16:57:45.472 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:45.500 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 16:57:45.500 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 16:57:45.535 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 16:57:45.536 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 16:57:45.537 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 16:57:45.597 [http-nio-8082-exec-5] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 16:57:54.968 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 16:57:54.969 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 16:57:55.024 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 16:57:55.025 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 16:57:55.115 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 16:57:55.116 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 16:57:55.116 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 1234567(String), teacher(String), 张教授(String), zhang@example.com(String), 13911111111(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T16:57:55.115405400(LocalDateTime), 2(Long)
+2025-06-03 16:57:55.151 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:01:49.589 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:01:49.628 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 17:01:49.628 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 17:01:49.670 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 17:01:49.670 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 17:01:49.671 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 17:01:49.698 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 17:02:14.357 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:14.358 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.controller.UserController - 修改密码: teacher1
+2025-06-03 17:02:14.410 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:02:14.410 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:14.440 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:02:14.441 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:02:14.442 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.com(String), 13911111111(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:14.441283400(LocalDateTime), 2(Long)
+2025-06-03 17:02:14.493 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:20.466 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-03 17:02:20.500 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:02:20.500 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:20.535 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:02:20.535 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-03 17:02:20.535 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-03 17:02:20.562 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-03 17:02:20.563 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc0ODk0MTM0MCwiZXhwIjoxNzQ5MDI3NzQwfQ.tZosxCi8Q2cJJi7FXUXOLN52_6ZgKPVvM6bjMrSmANEbWRJJcUE3oVGBJgTMDav4WHEQG5XfJ1IuXWMJGKVITA
+2025-06-03 17:02:20.564 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:02:20.564 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:20.593 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:02:20.637 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:20.639 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 17:02:20.639 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 17:02:20.710 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 17:02:20.710 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 17:02:20.710 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 17:02:20.760 [http-nio-8082-exec-9] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 17:02:33.935 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:34.007 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 17:02:34.007 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 17:02:34.104 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 17:02:34.105 [http-nio-8082-exec-1] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 17:02:34.105 [http-nio-8082-exec-1] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 17:02:34.176 [http-nio-8082-exec-1] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 17:02:41.077 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:41.079 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:02:41.122 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:02:41.122 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:41.150 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:02:41.151 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:02:41.151 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:41.150626400(LocalDateTime), 2(Long)
+2025-06-03 17:02:41.181 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:41.183 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:02:41.183 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:41.211 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:02:41.214 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:02:41.215 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:41.211201800(LocalDateTime), 1(Long)
+2025-06-03 17:02:41.246 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:54.145 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:54.146 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:02:54.177 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:02:54.177 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:54.222 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:02:54.223 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:02:54.223 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:54.223903300(LocalDateTime), 2(Long)
+2025-06-03 17:02:54.252 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:54.252 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:02:54.253 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:54.279 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:02:54.280 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:02:54.280 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:54.279062200(LocalDateTime), 1(Long)
+2025-06-03 17:02:54.317 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:55.220 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:02:55.221 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:02:55.258 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:02:55.258 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:55.285 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:02:55.287 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:02:55.290 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:55.286576300(LocalDateTime), 2(Long)
+2025-06-03 17:02:55.317 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:02:55.319 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:02:55.319 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:02:55.349 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:02:55.349 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:02:55.349 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:02:55.349763300(LocalDateTime), 1(Long)
+2025-06-03 17:02:55.378 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:32.842 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:32.843 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:32.871 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:32.871 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:32.900 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:32.901 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:32.901 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:32.901068100(LocalDateTime), 2(Long)
+2025-06-03 17:03:32.942 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:32.943 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:32.943 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:32.974 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:32.975 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:32.975 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:32.974944200(LocalDateTime), 1(Long)
+2025-06-03 17:03:33.004 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:33.887 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:33.887 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:33.915 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:33.915 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:33.940 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:33.941 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:33.941 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:33.941445400(LocalDateTime), 2(Long)
+2025-06-03 17:03:33.975 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:33.976 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:33.976 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:34.004 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:34.005 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:34.006 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:34.005504500(LocalDateTime), 1(Long)
+2025-06-03 17:03:34.042 [http-nio-8082-exec-7] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:38.876 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:38.913 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 17:03:38.913 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 17:03:38.946 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 17:03:38.946 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 17:03:38.946 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 17:03:39.015 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 17:03:39.873 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:39.873 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:39.907 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:39.907 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:39.933 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:39.934 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:39.934 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:39.933288300(LocalDateTime), 2(Long)
+2025-06-03 17:03:39.964 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:39.965 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:39.967 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:40.006 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:40.007 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:40.007 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:40.007787500(LocalDateTime), 1(Long)
+2025-06-03 17:03:40.050 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:40.970 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:40.970 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:41.010 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:41.011 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.046 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.048 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:41.049 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.047466200(LocalDateTime), 2(Long)
+2025-06-03 17:03:41.088 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.088 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:41.088 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.120 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.120 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:41.121 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.120422300(LocalDateTime), 1(Long)
+2025-06-03 17:03:41.167 [http-nio-8082-exec-9] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.396 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:41.396 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:41.397 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:41.397 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.426 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.427 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:41.427 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.426776(LocalDateTime), 2(Long)
+2025-06-03 17:03:41.453 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.454 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:41.454 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.494 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.495 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:41.496 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.494291300(LocalDateTime), 1(Long)
+2025-06-03 17:03:41.524 [http-nio-8082-exec-1] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.619 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:41.620 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:41.621 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:41.621 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.663 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.663 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:41.663 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.663893600(LocalDateTime), 2(Long)
+2025-06-03 17:03:41.699 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.700 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:41.700 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.737 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.739 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:41.739 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.739646300(LocalDateTime), 1(Long)
+2025-06-03 17:03:41.777 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.789 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:41.789 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:41.790 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:41.790 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.839 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.839 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:41.840 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.839107200(LocalDateTime), 2(Long)
+2025-06-03 17:03:41.880 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.880 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:41.880 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:41.940 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:41.940 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:41.941 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:41.940741900(LocalDateTime), 1(Long)
+2025-06-03 17:03:41.945 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:41.946 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:41.974 [http-nio-8082-exec-5] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:41.980 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:41.981 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.012 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.012 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:42.013 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.012123100(LocalDateTime), 2(Long)
+2025-06-03 17:03:42.057 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:42.057 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:42.057 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.104 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:42.105 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:42.106 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:42.106 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.109 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.109 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:42.110 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.109707700(LocalDateTime), 1(Long)
+2025-06-03 17:03:42.174 [http-nio-8082-exec-2] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:42.174 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.174 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:42.174 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.174284700(LocalDateTime), 2(Long)
+2025-06-03 17:03:42.204 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:42.205 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:42.205 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.246 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.246 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:42.246 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.246303200(LocalDateTime), 1(Long)
+2025-06-03 17:03:42.259 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 17:03:42.260 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.controller.UserController - 更新用户信息: teacher1
+2025-06-03 17:03:42.262 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-03 17:03:42.262 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.302 [http-nio-8082-exec-10] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:42.310 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.310 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==>  Preparing: UPDATE t_user SET username=?, password=?, role=?, real_name=?, email=?, phone=?, status=?, login_fail_count=?, create_time=?, update_time=? WHERE id=?
+2025-06-03 17:03:42.311 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - ==> Parameters: teacher1(String), 123456(String), teacher(String), 张教授(String), zhang@example.co(String), 13911111112(String), 0(Integer), 0(Integer), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.310352(LocalDateTime), 2(Long)
+2025-06-03 17:03:42.347 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.UserMapper.updateById - <==    Updates: 1
+2025-06-03 17:03:42.348 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-03 17:03:42.348 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-03 17:03:42.423 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-03 17:03:42.424 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==>  Preparing: UPDATE t_teacher SET username=?, real_name=?, gender=?, birth_date=?, title=?, department=?, position=?, research_area=?, email=?, phone=?, office_location=?, avatar_url=?, create_time=?, update_time=? WHERE id=? AND is_deleted=0
+2025-06-03 17:03:42.424 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - ==> Parameters: teacher1(String), 张教授(String), 男(String), 1975-01-15(LocalDate), 教授(String), 计算机科学与技术学院(String), 教授(String), 人工智能、大数据分析(String), zhang@example.co(String), 13911111112(String), 科研楼A座301室(String), http://example.com/avatars/teacher1.jpg(String), 2025-05-26T13:52:55.852980(LocalDateTime), 2025-06-03T17:03:42.423067800(LocalDateTime), 1(Long)
+2025-06-03 17:03:42.649 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.updateById - <==    Updates: 1

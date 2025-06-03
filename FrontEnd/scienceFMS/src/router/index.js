@@ -10,7 +10,7 @@ import Awards from '../components/teacher/Awards.vue';
 import Patents from '../components/teacher/Patents.vue';
 import Visits from '../components/teacher/Visits.vue';
 import Settings from '../components/teacher/Settings.vue';
-import ResearchSummary from '../views/teacher/ResearchSummary.vue';
+import ResearchSummary from '../components/teacher/ResearchSummary.vue';
 
 const routes = [
   {

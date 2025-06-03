@@ -408,5 +408,23 @@ export const getReimbursementTemplate = (id) => {
   });
 };
 
+/**
+ * 修改用户密码
+ * @param {Object} data - 包含用户名和新旧密码
+ * @returns {Promise}
+ */
+export const updatePassword = (data) => {
+  return api.put('/user/password', data);
+};
+
+/**
+ * 更新用户基本信息（邮箱、手机号）
+ * @param {Object} data - 用户信息
+ * @returns {Promise}
+ */
+export const updateUserInfo = (data) => {
+  return api.put('/user/info', data);
+};
+
 // 导出api实例
 export default api; 
