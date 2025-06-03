@@ -35,6 +35,10 @@
             <el-icon><Location /></el-icon>
             <span>出访记录</span>
           </el-menu-item>
+          <el-menu-item index="/teacher/research-summary">
+            <el-icon><ChatDotRound /></el-icon>
+            <span>科研成果摘要</span>
+          </el-menu-item>
         </el-menu>
         
         <!-- 底部功能区 -->
@@ -97,7 +101,7 @@ import { ref, computed, onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import * as auth from '../utils/auth';
 import {
-  User, Files, Trophy, Document, Location, Setting, SwitchButton, CaretBottom
+  User, Files, Trophy, Document, Location, Setting, SwitchButton, CaretBottom, ChatDotRound
 } from '@element-plus/icons-vue';
 
 const router = useRouter();
@@ -116,6 +120,7 @@ const breadcrumbTitle = computed(() => {
     '/teacher/research-projects': '科研项目',
     '/teacher/awards': '获奖信息',
     '/teacher/patents': '专利著作',
+    '/teacher/research-summary': '科研成果摘要',
     '/teacher/visits': '出访记录',
     '/teacher/settings': '设置'
   };

@@ -36,3 +36,138 @@
 2025-06-03 15:15:49.716 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
 2025-06-03 15:15:49.716 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
 2025-06-03 15:15:49.751 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 15:26:31.294 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:26:31.362 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 15:26:31.364 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 15:26:31.503 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 15:26:31.503 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 15:26:31.505 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 15:26:31.683 [http-nio-8082-exec-6] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 15:26:51.702 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:26:51.980 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 15:26:51.987 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 15:26:52.108 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 15:26:52.108 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 15:26:52.108 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 15:26:52.192 [http-nio-8082-exec-7] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 15:27:18.129 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:18.168 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-03 15:27:18.168 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-03 15:27:18.204 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-03 15:27:18.205 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-03 15:27:18.205 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-03 15:27:18.251 [http-nio-8082-exec-8] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 3
+2025-06-03 15:27:28.876 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:28.877 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:28.919 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ? AND (start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? AND (start_date < ? AND end_date > ?)))
+2025-06-03 15:27:28.919 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==> Parameters: 1(Long), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-06-03 15:27:28.953 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
+2025-06-03 15:27:28.978 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_visit_record WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:27:28.978 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:27:29.044 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:27:29.054 [http-nio-8082-exec-1] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==>  Preparing: SELECT id,purpose,location,start_date,end_date,result,itinerary_file,report_file,reimbursement_status,reimbursement_amount,teacher_id,create_time,update_time,is_deleted FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY start_date DESC LIMIT ?
+2025-06-03 15:27:29.056 [http-nio-8082-exec-1] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:27:29.101 [http-nio-8082-exec-1] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4
+2025-06-03 15:27:29.679 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:29.719 [http-nio-8082-exec-2] DEBUG h.c.s.m.I.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_intellectual_property WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:27:29.719 [http-nio-8082-exec-2] DEBUG h.c.s.m.I.selectPage_mpCount - ==> Parameters: 2(Long)
+2025-06-03 15:27:29.760 [http-nio-8082-exec-2] DEBUG h.c.s.m.I.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:27:29.760 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY auth_date DESC,apply_date DESC LIMIT ?
+2025-06-03 15:27:29.760 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==> Parameters: 2(Long), 10(Long)
+2025-06-03 15:27:29.794 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - <==      Total: 4
+2025-06-03 15:27:29.998 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:30.002 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:27:30.003 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_award WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:27:30.003 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:27:30.055 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:27:30.056 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY award_date DESC LIMIT ?
+2025-06-03 15:27:30.056 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:27:30.056 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_research_project WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:27:30.058 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:27:30.085 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - <==      Total: 3
+2025-06-03 15:27:30.086 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:27:30.087 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY create_time DESC LIMIT ?
+2025-06-03 15:27:30.087 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==> Parameters: 1(Long), 100(Long)
+2025-06-03 15:27:30.121 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - <==      Total: 5
+2025-06-03 15:28:02.836 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:02.836 [http-nio-8082-exec-9] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:02.952 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_visit_record WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:02.960 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:02.961 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ? AND (start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? AND (start_date < ? AND end_date > ?)))
+2025-06-03 15:28:02.962 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==> Parameters: 1(Long), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-06-03 15:28:03.004 [http-nio-8082-exec-9] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
+2025-06-03 15:28:03.004 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:03.004 [http-nio-8082-exec-10] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==>  Preparing: SELECT id,purpose,location,start_date,end_date,result,itinerary_file,report_file,reimbursement_status,reimbursement_amount,teacher_id,create_time,update_time,is_deleted FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY start_date DESC LIMIT ?
+2025-06-03 15:28:03.004 [http-nio-8082-exec-10] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:03.035 [http-nio-8082-exec-10] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4
+2025-06-03 15:28:03.194 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:03.195 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:03.201 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_award WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:03.201 [http-nio-8082-exec-1] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_research_project WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:03.201 [http-nio-8082-exec-1] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:03.201 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:03.251 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:03.251 [http-nio-8082-exec-1] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:03.251 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY create_time DESC LIMIT ?
+2025-06-03 15:28:03.251 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY award_date DESC LIMIT ?
+2025-06-03 15:28:03.251 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:03.251 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==> Parameters: 1(Long), 100(Long)
+2025-06-03 15:28:03.311 [http-nio-8082-exec-3] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - <==      Total: 3
+2025-06-03 15:28:03.321 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - <==      Total: 5
+2025-06-03 15:28:03.698 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:03.703 [http-nio-8082-exec-4] DEBUG h.c.s.m.I.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_intellectual_property WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:03.704 [http-nio-8082-exec-4] DEBUG h.c.s.m.I.selectPage_mpCount - ==> Parameters: 2(Long)
+2025-06-03 15:28:03.735 [http-nio-8082-exec-4] DEBUG h.c.s.m.I.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:03.735 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY auth_date DESC,apply_date DESC LIMIT ?
+2025-06-03 15:28:03.735 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==> Parameters: 2(Long), 10(Long)
+2025-06-03 15:28:03.785 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - <==      Total: 4
+2025-06-03 15:28:04.023 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:04.023 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:04.025 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ? AND (start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? AND (start_date < ? AND end_date > ?)))
+2025-06-03 15:28:04.027 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==> Parameters: 1(Long), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-06-03 15:28:04.051 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
+2025-06-03 15:28:04.077 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_visit_record WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:04.077 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:04.171 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:04.171 [http-nio-8082-exec-2] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==>  Preparing: SELECT id,purpose,location,start_date,end_date,result,itinerary_file,report_file,reimbursement_status,reimbursement_amount,teacher_id,create_time,update_time,is_deleted FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY start_date DESC LIMIT ?
+2025-06-03 15:28:04.174 [http-nio-8082-exec-2] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:04.259 [http-nio-8082-exec-2] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4
+2025-06-03 15:28:05.629 [http-nio-8082-exec-5] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:05.659 [http-nio-8082-exec-5] DEBUG h.c.s.m.I.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_intellectual_property WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:05.659 [http-nio-8082-exec-5] DEBUG h.c.s.m.I.selectPage_mpCount - ==> Parameters: 2(Long)
+2025-06-03 15:28:05.719 [http-nio-8082-exec-5] DEBUG h.c.s.m.I.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:05.719 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==>  Preparing: SELECT id,title,type,subtype,auth_number,apply_date,auth_date,inventor_rank,teacher_id,create_time,update_time,is_deleted FROM t_intellectual_property WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY auth_date DESC,apply_date DESC LIMIT ?
+2025-06-03 15:28:05.721 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - ==> Parameters: 2(Long), 10(Long)
+2025-06-03 15:28:05.751 [http-nio-8082-exec-5] DEBUG h.c.s.mapper.IntellectualPropertyMapper.selectPage - <==      Total: 4
+2025-06-03 15:28:06.007 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:06.007 [http-nio-8082-exec-7] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:06.009 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_award WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:06.009 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:06.100 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_research_project WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:06.100 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:06.101 [http-nio-8082-exec-8] DEBUG h.c.s.mapper.AwardMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:06.101 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==>  Preparing: SELECT id,award_name,award_level,issuing_unit,award_date,certificate_image,related_project_id,teacher_id,create_time,update_time,is_deleted FROM t_award WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY award_date DESC LIMIT ?
+2025-06-03 15:28:06.101 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:06.125 [http-nio-8082-exec-7] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:06.125 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY create_time DESC LIMIT ?
+2025-06-03 15:28:06.125 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==> Parameters: 1(Long), 100(Long)
+2025-06-03 15:28:06.125 [http-nio-8082-exec-8] DEBUG hit.cs.sciencefms.mapper.AwardMapper.selectPage - <==      Total: 3
+2025-06-03 15:28:06.201 [http-nio-8082-exec-7] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - <==      Total: 5
+2025-06-03 15:28:06.327 [http-nio-8082-exec-10] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:06.329 [http-nio-8082-exec-10] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_research_project WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:06.329 [http-nio-8082-exec-10] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:06.667 [http-nio-8082-exec-10] DEBUG h.c.s.m.ResearchProjectMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:06.667 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==>  Preparing: SELECT id,project_name,project_code,source,funding,start_date,end_date,attachments,teacher_id,role,create_time,update_time,is_deleted FROM t_research_project WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY create_time DESC LIMIT ?
+2025-06-03 15:28:06.667 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:06.737 [http-nio-8082-exec-10] DEBUG h.c.s.mapper.ResearchProjectMapper.selectPage - <==      Total: 5
+2025-06-03 15:28:10.284 [http-nio-8082-exec-1] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:10.284 [http-nio-8082-exec-3] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-03 15:28:10.325 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_visit_record WHERE is_deleted = 0 AND (teacher_id = ?)
+2025-06-03 15:28:10.325 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ? AND (start_date BETWEEN ? AND ? OR end_date BETWEEN ? AND ? AND (start_date < ? AND end_date > ?)))
+2025-06-03 15:28:10.325 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - ==> Parameters: 1(Long)
+2025-06-03 15:28:10.325 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - ==> Parameters: 1(Long), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate), 2025-01-01(LocalDate), 2025-12-31(LocalDate)
+2025-06-03 15:28:10.401 [http-nio-8082-exec-3] DEBUG h.c.s.mapper.VisitRecordMapper.selectPage_mpCount - <==      Total: 1
+2025-06-03 15:28:10.402 [http-nio-8082-exec-3] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==>  Preparing: SELECT id,purpose,location,start_date,end_date,result,itinerary_file,report_file,reimbursement_status,reimbursement_amount,teacher_id,create_time,update_time,is_deleted FROM t_visit_record WHERE is_deleted=0 AND (teacher_id = ?) ORDER BY start_date DESC LIMIT ?
+2025-06-03 15:28:10.402 [http-nio-8082-exec-3] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - ==> Parameters: 1(Long), 10(Long)
+2025-06-03 15:28:10.425 [http-nio-8082-exec-1] DEBUG h.c.s.mapper.VisitRecordMapper.selectCount - <==      Total: 1
+2025-06-03 15:28:10.449 [http-nio-8082-exec-3] DEBUG h.c.sciencefms.mapper.VisitRecordMapper.selectPage - <==      Total: 4

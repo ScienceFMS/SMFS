@@ -10,6 +10,7 @@ import Awards from '../components/teacher/Awards.vue';
 import Patents from '../components/teacher/Patents.vue';
 import Visits from '../components/teacher/Visits.vue';
 import Settings from '../components/teacher/Settings.vue';
+import ResearchSummary from '../views/teacher/ResearchSummary.vue';
 
 const routes = [
   {
@@ -51,6 +52,12 @@ const routes = [
         path: 'patents',
         name: 'Patents',
         component: Patents,
+        meta: { requiresAuth: true, role: 'teacher' }
+      },
+      {
+        path: 'research-summary',
+        name: 'ResearchSummary',
+        component: ResearchSummary,
         meta: { requiresAuth: true, role: 'teacher' }
       },
       {
