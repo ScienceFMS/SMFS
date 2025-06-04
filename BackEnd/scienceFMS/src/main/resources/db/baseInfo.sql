@@ -69,7 +69,7 @@ CREATE TABLE t_award (
 CREATE TABLE t_intellectual_property (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    type VARCHAR(50) NOT NULL, -- 专利/著作权
+    title VARCHAR(50) NOT NULL, -- 专利/著作权
     subtype VARCHAR(50), -- 专利类型(发明/实用新型等)
     auth_number VARCHAR(100) NOT NULL, -- 授权号
     apply_date DATE NOT NULL, -- 申请时间

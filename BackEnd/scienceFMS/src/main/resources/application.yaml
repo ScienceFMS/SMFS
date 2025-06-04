@@ -11,6 +11,12 @@ spring:
   # 应用配置
   application:
     name: scienceFMS
+    
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 # 服务器配置
 server:
@@ -42,3 +48,12 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+
+# 文件上传路径配置
+file:
+  upload:
+    # 静态资源服务器配置
+    static-server:
+      base-url: http://120.46.48.74:9000
+      upload-url: http://120.46.48.74:9000/upload-delete/upload
+      delete-url: http://120.46.48.74:9000/upload-delete/delete
