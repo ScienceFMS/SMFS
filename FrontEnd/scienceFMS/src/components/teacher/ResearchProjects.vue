@@ -518,22 +518,14 @@ const downloadFile = (url) => {
     return;
   }
   
-  try {
-    console.log(`[ResearchProjects] 开始下载文件: ${url}`);
-    ElMessage.success('开始下载文件');
-    
-    // 创建一个临时链接并点击它来下载文件
-    const link = document.createElement('a');
-    link.href = url;
-    link.target = '_blank';
-    link.download = getFileName(url);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } catch (error) {
-    console.error('[ResearchProjects] 下载文件失败:', error);
-    ElMessage.error('下载文件失败，请稍后重试');
-  }
+  // 创建一个临时链接并点击它来下载文件
+  const link = document.createElement('a');
+  link.href = url;
+  link.target = '_blank';
+  link.download = getFileName(url);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 
 // 提交表单
