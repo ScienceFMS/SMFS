@@ -486,5 +486,14 @@ export const updateAvatarUrl = (data) => {
   return api.post('/teacher/profile/update-avatar-url', data);
 };
 
+/**
+ * 获取教师的科研成果摘要
+ * @param {Number} teacherId - 教师ID
+ * @returns {Promise}
+ */
+export const getResearchSummary = (teacherId) => {
+  return api.get(`/teacher/research-summary/generate/${teacherId}`);
+};
+
 // 导出api实例
 export default api; 

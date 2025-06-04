@@ -3,74 +3,70 @@
     <h2>科研成果摘要</h2>
     
     <el-card class="summary-card">
-      <div class="card-header">
-        <h3>科研成果信息</h3>
-        <el-button type="primary" @click="generateSummary">生成摘要</el-button>
-      </div>
-      
-      <el-form label-position="top">
-        <el-form-item label="科研成果详情">
-          <el-input
-            v-model="researchDetails"
-            type="textarea"
-            :rows="8"
-            placeholder="请输入您的科研成果详细信息..."
-          />
-        </el-form-item>
-      </el-form>
-      
-      <el-divider content-position="center">生成结果</el-divider>
-      
       <div v-if="loading" class="loading-container">
         <el-skeleton :rows="6" animated />
       </div>
       
       <div v-else-if="summary" class="summary-result">
-        <h4>摘要结果</h4>
+        <h4>教师科研成果摘要</h4>
         <div class="summary-content">{{ summary }}</div>
         <div class="action-buttons">
           <el-button type="primary" @click="copySummary">复制</el-button>
           <el-button type="success" @click="downloadSummary">下载</el-button>
+          <el-button type="warning" @click="refreshSummary">刷新</el-button>
         </div>
       </div>
       
       <div v-else class="empty-result">
-        <el-empty description="暂无摘要，请输入科研成果并点击生成" />
+        <el-empty description="暂无科研成果摘要，请点击生成按钮" />
+        <div class="generate-button">
+          <el-button type="primary" @click="generateSummary">生成摘要</el-button>
+        </div>
       </div>
     </el-card>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { ElMessage } from 'element-plus';
+import { getResearchSummary } from '../../utils/api';
 
-const researchDetails = ref('');
 const summary = ref('');
 const loading = ref(false);
 
-const generateSummary = async () => {
-  if (!researchDetails.value.trim()) {
-    ElMessage.warning('请先输入科研成果详情');
-    return;
-  }
-  
+// 组件挂载时不再自动获取摘要
+
+// 获取当前教师的科研成果摘要
+const fetchResearchSummary = async () => {
   loading.value = true;
   try {
-    // 模拟调用大模型API生成摘要
-    // 实际项目中，这里应该调用后端API，后端再调用大模型
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // 从localStorage获取用户信息
+    const teacherId = localStorage.getItem('teacherId');
+    const response = await getResearchSummary(teacherId);
     
-    // 模拟返回结果
-    summary.value = `这是基于您提供的科研成果生成的摘要：\n\n${researchDetails.value.substring(0, 100)}...\n\n该研究具有重要的学术价值和应用前景，主要创新点包括...（此处为模拟数据）`;
-    
-    ElMessage.success('摘要生成成功');
+    if (response.code === 200) {
+      summary.value = response.data;
+      ElMessage.success('科研成果摘要获取成功');
+    } else {
+      throw new Error(response.message || '获取摘要失败');
+    }
   } catch (error) {
-    console.error('生成摘要失败:', error);
-    ElMessage.error('生成摘要失败，请稍后重试');
+    console.error('获取科研成果摘要失败:', error);
+    ElMessage.error(error.message || '获取科研成果摘要失败，请稍后重试');
   } finally {
     loading.value = false;
   }
+};
+
+// 生成摘要
+const generateSummary = () => {
+  fetchResearchSummary();
+};
+
+// 刷新摘要
+const refreshSummary = () => {
+  fetchResearchSummary();
 };
 
 const copySummary = () => {
@@ -106,17 +102,6 @@ const downloadSummary = () => {
   margin-top: 20px;
 }
 
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.card-header h3 {
-  margin: 0;
-}
-
 .loading-container {
   padding: 20px 0;
 }
@@ -143,5 +128,12 @@ const downloadSummary = () => {
 
 .empty-result {
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generate-button, .refresh-button {
+  margin-top: 20px;
 }
 </style> 

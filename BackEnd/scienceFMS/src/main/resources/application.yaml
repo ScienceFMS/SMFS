@@ -57,3 +57,14 @@ file:
       base-url: http://120.46.48.74:9000
       upload-url: http://120.46.48.74:9000/upload-delete/upload
       delete-url: http://120.46.48.74:9000/upload-delete/delete
+
+
+# LangChain4j配置
+langchain4j:
+  qianfan:
+    chat-model:
+      api-key: Qy8xDTNUukWWFyY1lEOXdsQl
+      secret-key: RbCY7XFNjX9KtvSiQvUoZJ85WhvVMScf
+      model-name: Yi-34B-Chat
+      temperature: 0.3
+      timeout: 60s 

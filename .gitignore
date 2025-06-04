@@ -1,2 +1,3 @@
 BackEnd/scienceFMS/logs/sciencefms.log
 .idea/
+langchain/*
