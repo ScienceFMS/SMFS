@@ -15,17 +15,13 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Year;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 出访记录服务实现类
@@ -33,9 +29,6 @@ import java.util.UUID;
 @Service
 @Slf4j
 public class VisitRecordServiceImpl extends ServiceImpl<VisitRecordMapper, VisitRecord> implements VisitRecordService {
-
-    @Value("${file.upload.path:/uploads}")
-    private String uploadPath;
 
     @Override
     public List<VisitRecord> getVisitRecordsByTeacherId(Long teacherId) {
@@ -104,16 +97,6 @@ public class VisitRecordServiceImpl extends ServiceImpl<VisitRecordMapper, Visit
     @Override
     public VisitRecord getVisitRecordById(Long id) {
         return getById(id);
-    }
-
-    @Override
-    public String uploadItineraryFile(MultipartFile file) throws IOException {
-        return uploadFile(file, "itinerary");
-    }
-
-    @Override
-    public String uploadReportFile(MultipartFile file) throws IOException {
-        return uploadFile(file, "report");
     }
 
     @Override
@@ -238,47 +221,5 @@ public class VisitRecordServiceImpl extends ServiceImpl<VisitRecordMapper, Visit
                 );
         
         return (int) count(wrapper);
-    }
-    
-    /**
-     * 上传文件
-     * 
-     * @param file 文件
-     * @param fileType 文件类型
-     * @return 文件URL
-     * @throws IOException
-     */
-    private String uploadFile(MultipartFile file, String fileType) throws IOException {
-        // 检查文件是否为空
-        if (file.isEmpty()) {
-            throw new IllegalArgumentException("文件不能为空");
-        }
-        
-        // 检查目录是否存在，不存在则创建
-        File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) {
-            uploadDir.mkdirs();
-        }
-        
-        // 生成唯一文件名
-        String originalFilename = file.getOriginalFilename();
-        String fileExtension = StringUtils.getFilenameExtension(originalFilename);
-        String newFilename = UUID.randomUUID().toString() + "." + fileExtension;
-        
-        // 存储路径
-        String subDirectory = "visit_records/" + fileType + "/";
-        File directory = new File(uploadPath + "/" + subDirectory);
-        if (!directory.exists()) {
-            directory.mkdirs();
-        }
-        
-        String filePath = uploadPath + "/" + subDirectory + newFilename;
-        File dest = new File(filePath);
-        
-        // 保存文件
-        file.transferTo(dest);
-        
-        // 返回相对路径，用于存储到数据库
-        return "/uploads/" + subDirectory + newFilename;
     }
 } 

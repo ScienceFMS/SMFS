@@ -12,9 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.HashMap;
@@ -113,6 +111,11 @@ public class VisitRecordController {
         VisitRecord visit = new VisitRecord();
         BeanUtils.copyProperties(visitDTO, visit);
         
+        // 设置创建和更新时间
+        visit.setCreateTime(LocalDateTime.now());
+        visit.setUpdateTime(LocalDateTime.now());
+        visit.setIsDeleted(0);
+        
         boolean success = visitRecordService.addVisitRecord(visit);
         if (!success) {
             return Result.fail("添加失败");
@@ -137,6 +140,9 @@ public class VisitRecordController {
         
         BeanUtils.copyProperties(visitDTO, visit);
         
+        // 设置更新时间
+        visit.setUpdateTime(LocalDateTime.now());
+        
         boolean success = visitRecordService.updateVisitRecord(visit);
         return success ? Result.success(true) : Result.fail("更新失败");
     }
@@ -151,38 +157,6 @@ public class VisitRecordController {
     public Result<Boolean> deleteVisitRecord(@PathVariable("id") Long id) {
         boolean success = visitRecordService.deleteVisitRecord(id);
         return success ? Result.success(true) : Result.fail("删除失败");
-    }
-    
-    /**
-     * 上传行程单文件
-     *
-     * @param file 文件
-     * @return 上传结果
-     */
-    @PostMapping("/upload/itinerary")
-    public Result<String> uploadItineraryFile(@RequestParam("file") MultipartFile file) {
-        try {
-            String fileUrl = visitRecordService.uploadItineraryFile(file);
-            return Result.success(fileUrl);
-        } catch (Exception e) {
-            return Result.fail("文件上传失败：" + e.getMessage());
-        }
-    }
-    
-    /**
-     * 上传成果报告文件
-     *
-     * @param file 文件
-     * @return 上传结果
-     */
-    @PostMapping("/upload/report")
-    public Result<String> uploadReportFile(@RequestParam("file") MultipartFile file) {
-        try {
-            String fileUrl = visitRecordService.uploadReportFile(file);
-            return Result.success(fileUrl);
-        } catch (Exception e) {
-            return Result.fail("文件上传失败：" + e.getMessage());
-        }
     }
     
     /**
