@@ -103,6 +103,10 @@ public class AwardController {
         Award award = new Award();
         BeanUtils.copyProperties(awardDTO, award);
         
+        // 设置创建和更新时间
+        award.setCreateTime(LocalDateTime.now());
+        award.setUpdateTime(LocalDateTime.now());
+        
         boolean success = awardService.addAward(award);
         if (!success) {
             return Result.fail("添加失败");
@@ -127,6 +131,9 @@ public class AwardController {
         
         BeanUtils.copyProperties(awardDTO, award);
         
+        // 设置更新时间
+        award.setUpdateTime(LocalDateTime.now());
+        
         boolean success = awardService.updateAward(award);
         return success ? Result.success(true) : Result.fail("更新失败");
     }
@@ -139,6 +146,12 @@ public class AwardController {
      */
     @DeleteMapping("/{id}")
     public Result<Boolean> deleteAward(@PathVariable("id") Long id) {
+        // 获取获奖信息，以便删除关联的证书图片
+        Award award = awardService.getAwardById(id);
+        if (award == null) {
+            return Result.fail("获奖信息不存在");
+        }
+        
         boolean success = awardService.deleteAward(id);
         return success ? Result.success(true) : Result.fail("删除失败");
     }

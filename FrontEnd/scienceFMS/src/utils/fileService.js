@@ -2,7 +2,7 @@
  * 文件服务工具
  * 用于直接与静态资源服务器通信，处理文件上传和删除
  */
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid' ;
 import api from './api';
 
 // 静态资源服务器配置
