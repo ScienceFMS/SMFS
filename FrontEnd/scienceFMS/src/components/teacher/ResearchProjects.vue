@@ -61,6 +61,19 @@
             </el-tag>
           </template>
         </el-table-column>
+        <el-table-column label="附件" width="100">
+          <template #default="{ row }">
+            <el-button 
+              v-if="row.attachments" 
+              type="primary" 
+              link 
+              @click="downloadFile(row.attachments)"
+            >
+              <el-icon><Download /></el-icon> 下载
+            </el-button>
+            <span v-else>无</span>
+          </template>
+        </el-table-column>
         <el-table-column label="操作" width="180" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link @click="handleView(row)">查看</el-button>
@@ -94,7 +107,7 @@
     <!-- 项目表单对话框 -->
     <el-dialog
       v-model="dialogVisible"
-      :title="dialogType === 'add' ? '新增项目' : '编辑项目'"
+      :title="dialogType === 'add' ? '新增项目' : (dialogType === 'edit' ? '编辑项目' : '查看项目')"
       width="680px"
     >
       <el-form 
@@ -103,6 +116,7 @@
         :rules="rules" 
         label-width="100px"
         label-position="right"
+        :disabled="dialogType === 'view'"
       >
         <el-form-item label="项目名称" prop="projectName">
           <el-input v-model="projectForm.projectName" placeholder="请输入项目名称"></el-input>
@@ -154,35 +168,63 @@
           </el-select>
         </el-form-item>
         <el-form-item label="附件">
-          <el-upload
-            action="/upload"
-            :on-success="handleUploadSuccess"
-            :on-remove="handleFileRemove"
-            :file-list="fileList"
-            multiple
-          >
-            <el-button type="primary">点击上传</el-button>
-            <template #tip>
-              <div class="el-upload__tip">支持PDF、Word、Excel等格式，不超过10MB</div>
-            </template>
-          </el-upload>
+          <div class="file-upload-container">
+            <div v-if="projectForm.attachments" class="file-preview-box">
+              <div class="file-info">
+                <el-icon><Document /></el-icon>
+                <span class="file-name">{{ getFileName(projectForm.attachments) }}</span>
+              </div>
+              <div class="file-actions" v-if="dialogType !== 'view'">
+                <el-button type="danger" icon="Delete" circle @click="removeAttachment"></el-button>
+              </div>
+            </div>
+            <el-upload
+              v-else
+              class="file-uploader"
+              action="#"
+              :auto-upload="false"
+              :show-file-list="false"
+              :on-change="handleAttachmentChange"
+              :disabled="dialogType === 'view'"
+              accept=".pdf,.doc,.docx,.xls,.xlsx,.zip,.rar"
+            >
+              <el-button type="primary">上传附件</el-button>
+              <template #tip>
+                <div class="el-upload__tip">支持PDF、Word、Excel、压缩包等格式，不超过10MB</div>
+              </template>
+            </el-upload>
+          </div>
         </el-form-item>
       </el-form>
       <template #footer>
         <span class="dialog-footer">
-          <el-button @click="dialogVisible = false">取消</el-button>
-          <el-button type="primary" @click="submitForm" :loading="submitting">确定</el-button>
+          <el-button @click="dialogVisible = false">{{ dialogType === 'view' ? '关闭' : '取消' }}</el-button>
+          <el-button v-if="dialogType !== 'view'" type="primary" @click="submitForm" :loading="submitting">确定</el-button>
         </span>
       </template>
+    </el-dialog>
+    
+    <!-- 文件预览对话框 -->
+    <el-dialog v-model="previewVisible" title="文件预览" width="500px">
+      <div class="file-preview">
+        <div class="preview-info">
+          <h3>{{ previewFileName }}</h3>
+          <p>点击下载查看文件</p>
+          <el-button type="primary" @click="downloadFile(previewUrl)">
+            <el-icon><Download /></el-icon> 下载文件
+          </el-button>
+        </div>
+      </div>
     </el-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref, reactive, onMounted, nextTick } from 'vue';
-import { Plus } from '@element-plus/icons-vue';
+import { Plus, Download, Document } from '@element-plus/icons-vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { getResearchProjects, getResearchProjectById, addResearchProject, updateResearchProject, deleteResearchProject } from '../../utils/api';
+import { uploadFile, deleteFile } from '../../utils/fileService';
 import * as auth from '../../utils/auth';
 
 // 分页数据
@@ -241,7 +283,12 @@ const projectList = ref([]);
 const dialogVisible = ref(false);
 const dialogType = ref('add');
 const projectFormRef = ref(null);
-const fileList = ref([]);
+
+// 文件相关
+const attachmentFile = ref(null);
+const previewVisible = ref(false);
+const previewUrl = ref('');
+const previewFileName = ref('');
 
 // 计算项目状态
 const calculateProjectStatus = (project) => {
@@ -271,6 +318,13 @@ const getStatusType = (status) => {
     '未知': 'danger'
   };
   return typeMap[status] || 'info';
+};
+
+// 获取文件名
+const getFileName = (fileUrl) => {
+  if (!fileUrl) return '';
+  const parts = fileUrl.split('/');
+  return parts[parts.length - 1];
 };
 
 // 处理新增项目
@@ -303,22 +357,24 @@ const resetFilter = () => {
 
 // 查看项目详情
 const handleView = (row) => {
-  // 实现查看项目详情的逻辑
-  const status = calculateProjectStatus(row);
-  ElMessageBox.alert(`
-    <div style="text-align:left">
-      <p><strong>项目名称：</strong>${row.projectName}</p>
-      <p><strong>项目编号：</strong>${row.projectCode}</p>
-      <p><strong>项目类型：</strong>${row.projectType}</p>
-      <p><strong>项目状态：</strong>${status}</p>
-      <p><strong>项目经费：</strong>${(row.funding / 10000).toFixed(2)}万元</p>
-      <p><strong>开始日期：</strong>${row.startDate}</p>
-      <p><strong>结束日期：</strong>${row.endDate}</p>
-      <p><strong>个人角色：</strong>${row.role || '未设置'}</p>
-    </div>
-  `, '项目详情', {
-    dangerouslyUseHTMLString: true,
-    confirmButtonText: '关闭'
+  dialogType.value = 'view';
+  resetForm();
+  
+  // 获取完整的项目数据
+  getResearchProjectById(row.id).then(response => {
+    if (response.code === 200) {
+      const project = response.data;
+      Object.keys(projectForm).forEach(key => {
+        projectForm[key] = project[key];
+      });
+      
+      dialogVisible.value = true;
+    } else {
+      ElMessage.error(response.message || '获取项目详情失败');
+    }
+  }).catch(error => {
+    console.error('获取项目详情失败', error);
+    ElMessage.error('获取项目详情失败，请稍后重试');
   });
 };
 
@@ -335,15 +391,6 @@ const handleEdit = (row) => {
         projectForm[key] = project[key];
       });
       
-      // 设置附件列表
-      if (project.attachments) {
-        const attachmentUrls = project.attachments.split(',');
-        fileList.value = attachmentUrls.map((url, index) => {
-          const fileName = url.substring(url.lastIndexOf('/') + 1);
-          return { name: fileName, url: url, uid: index };
-        });
-      }
-      
       dialogVisible.value = true;
     } else {
       ElMessage.error(response.message || '获取项目详情失败');
@@ -355,73 +402,181 @@ const handleEdit = (row) => {
 };
 
 // 删除项目
-const handleDelete = (row) => {
-  loading.value = true;
-  deleteResearchProject(row.id).then(response => {
+const handleDelete = async (row) => {
+  try {
+    // 如果有附件，先删除附件
+    if (row.attachments) {
+      try {
+        await deleteFile(row.attachments);
+      } catch (error) {
+        console.error('删除附件失败:', error);
+        ElMessage.warning('附件删除失败，但将继续删除项目');
+      }
+    }
+    
+    loading.value = true;
+    const response = await deleteResearchProject(row.id);
     if (response.code === 200) {
       ElMessage.success('删除成功');
       loadProjectData(); // 重新加载数据
     } else {
       ElMessage.error(response.message || '删除失败');
     }
-  }).catch(error => {
+  } catch (error) {
     console.error('删除项目失败', error);
     ElMessage.error('删除失败，请稍后重试');
-  }).finally(() => {
+  } finally {
     loading.value = false;
-  });
+  }
+};
+
+// 处理附件选择
+const handleAttachmentChange = (file) => {
+  // 检查文件类型
+  const validTypes = ['.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar'];
+  const isValidType = validTypes.some(type => file.name.toLowerCase().endsWith(type));
+  
+  if (!isValidType) {
+    ElMessage.error('请上传PDF、Word、Excel或压缩包格式的文件');
+    return;
+  }
+  
+  // 检查文件大小（限制为10MB）
+  const isLt10M = file.size / 1024 / 1024 < 10;
+  if (!isLt10M) {
+    ElMessage.error('文件大小不能超过10MB');
+    return;
+  }
+  
+  // 保存文件对象，用于后续上传
+  attachmentFile.value = file.raw;
+  
+  // 创建本地预览
+  projectForm.attachments = URL.createObjectURL(file.raw);
+};
+
+// 移除附件
+const removeAttachment = async () => {
+  if (dialogType.value === 'edit' && projectForm.attachments && !projectForm.attachments.startsWith('blob:')) {
+    try {
+      // 如果是编辑模式且文件已经上传到服务器，则删除服务器上的文件
+      const deleteResult = await deleteFile(projectForm.attachments);
+      if (!deleteResult.success) {
+        ElMessage.warning('附件从服务器删除失败，但已从表单中移除');
+      }
+    } catch (error) {
+      console.error('删除附件失败:', error);
+      ElMessage.warning('附件从服务器删除失败，但已从表单中移除');
+    }
+  }
+  
+  // 清除本地预览和文件对象
+  projectForm.attachments = '';
+  attachmentFile.value = null;
+};
+
+// 上传附件
+const uploadAttachment = async () => {
+  if (!attachmentFile.value) {
+    return true; // 没有新的附件，直接返回成功
+  }
+  
+  try {
+    // 上传附件到静态资源服务器
+    const uploadResult = await uploadFile(attachmentFile.value, 'project-attachment');
+    
+    if (!uploadResult.success) {
+      ElMessage.error(uploadResult.message || '附件上传失败');
+      return false;
+    }
+    
+    // 更新表单中的附件URL
+    projectForm.attachments = uploadResult.url;
+    return true;
+  } catch (error) {
+    console.error('附件上传失败:', error);
+    ElMessage.error('附件上传失败');
+    return false;
+  }
+};
+
+// 预览附件
+const previewAttachment = (fileUrl) => {
+  if (fileUrl) {
+    previewUrl.value = fileUrl;
+    previewFileName.value = getFileName(fileUrl);
+    previewVisible.value = true;
+  } else {
+    ElMessage.warning('文件不存在');
+  }
+};
+
+// 下载文件
+const downloadFile = (url) => {
+  if (!url) {
+    ElMessage.warning('文件链接不存在');
+    return;
+  }
+  
+  try {
+    console.log(`[ResearchProjects] 开始下载文件: ${url}`);
+    ElMessage.success('开始下载文件');
+    
+    // 创建一个临时链接并点击它来下载文件
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.download = getFileName(url);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error('[ResearchProjects] 下载文件失败:', error);
+    ElMessage.error('下载文件失败，请稍后重试');
+  }
 };
 
 // 提交表单
-const submitForm = () => {
+const submitForm = async () => {
   if (!projectFormRef.value) return;
   
-  projectFormRef.value.validate(valid => {
-    if (valid) {
-      submitting.value = true;
-      
-      // 处理附件
-      if (fileList.value.length > 0) {
-        const attachments = fileList.value.map(file => file.url || file.response.url).join(',');
-        projectForm.attachments = attachments;
+  await projectFormRef.value.validate(async (valid) => {
+    if (!valid) {
+      return;
+    }
+    
+    submitting.value = true;
+    
+    try {
+      // 先上传附件（如果有）
+      const uploadSuccess = await uploadAttachment();
+      if (!uploadSuccess) {
+        submitting.value = false;
+        return;
       }
       
-      // 直接提交表单数据，无需转换
+      // 调用API保存数据
       const apiCall = dialogType.value === 'add' 
         ? addResearchProject(projectForm) 
         : updateResearchProject(projectForm);
       
-      apiCall.then(response => {
-        if (response.code === 200) {
-          ElMessage.success(dialogType.value === 'add' ? '添加成功' : '更新成功');
-          dialogVisible.value = false;
-          loadProjectData(); // 重新加载数据
-        } else {
-          ElMessage.error(response.message || (dialogType.value === 'add' ? '添加失败' : '更新失败'));
-        }
-      }).catch(error => {
-        console.error(dialogType.value === 'add' ? '添加项目失败' : '更新项目失败', error);
-        ElMessage.error(dialogType.value === 'add' ? '添加失败，请稍后重试' : '更新失败，请稍后重试');
-      }).finally(() => {
-        submitting.value = false;
-      });
+      const response = await apiCall;
+      if (response.code === 200) {
+        ElMessage.success(dialogType.value === 'add' ? '添加成功' : '更新成功');
+        dialogVisible.value = false;
+        loadProjectData(); // 重新加载数据
+      } else {
+        ElMessage.error(response.message || (dialogType.value === 'add' ? '添加失败' : '更新失败'));
+      }
+    } catch (error) {
+      console.error(dialogType.value === 'add' ? '添加项目失败' : '更新项目失败', error);
+      ElMessage.error(dialogType.value === 'add' ? '添加失败，请稍后重试' : '更新失败，请稍后重试');
+    } finally {
+      submitting.value = false;
+      // 清除文件对象
+      attachmentFile.value = null;
     }
   });
-};
-
-// 处理文件上传成功
-const handleUploadSuccess = (response, file, fileList) => {
-  if (response.code === 200) {
-    ElMessage.success('文件上传成功');
-    file.url = response.data; // 假设后端返回的URL在data字段中
-  } else {
-    ElMessage.error(response.message || '文件上传失败');
-  }
-};
-
-// 处理文件移除
-const handleFileRemove = (file, fileList) => {
-  // 如果需要实现移除服务器文件功能，在这里调用删除文件的API
 };
 
 // 处理每页显示数量变化
@@ -449,7 +604,7 @@ const resetForm = () => {
     }
   });
   projectForm.id = null;
-  fileList.value = [];
+  attachmentFile.value = null;
 };
 
 // 加载项目数据
@@ -483,6 +638,13 @@ const loadProjectData = () => {
       projectList.value = data.records;
       total.value = data.total;
       console.log(`[ResearchProjects] 加载了${data.records.length}条记录，共${data.total}条`);
+      
+      // 检查附件信息是否存在
+      projectList.value.forEach(project => {
+        if (project.attachments) {
+          console.log(`[ResearchProjects] 项目 ${project.projectName} 有附件: ${project.attachments}`);
+        }
+      });
     } else {
       ElMessage.error(response.message || '获取项目列表失败');
     }
@@ -549,6 +711,53 @@ onMounted(() => {
   padding-top: 20px;
   text-align: right;
   display: block;
+}
+
+.file-upload-container {
+  width: 100%;
+}
+
+.file-preview-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-name {
+  word-break: break-all;
+  color: #606266;
+}
+
+.file-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.preview-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.preview-info h3 {
+  margin-bottom: 15px;
+  color: #303133;
+}
+
+.preview-info p {
+  margin-bottom: 20px;
+  color: #606266;
 }
 
 /* 响应式处理 */

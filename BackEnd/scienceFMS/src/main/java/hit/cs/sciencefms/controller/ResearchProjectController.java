@@ -9,6 +9,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -114,6 +115,11 @@ public class ResearchProjectController {
         project.setSource(projectDTO.getProjectType()); // 项目类型保存到source字段
         // 不再保存status字段，由前端根据日期计算
         
+        // 设置创建和更新时间
+        project.setCreateTime(LocalDateTime.now());
+        project.setUpdateTime(LocalDateTime.now());
+        project.setIsDeleted(0);
+        
         boolean success = researchProjectService.addProject(project);
         if (success) {
             // 返回创建后的项目信息
@@ -137,9 +143,15 @@ public class ResearchProjectController {
             return Result.fail("项目不存在");
         }
         
+        // 保存旧的附件URL，如果需要在服务端处理附件删除
+        String oldAttachments = project.getAttachments();
+        
         BeanUtils.copyProperties(projectDTO, project);
         project.setSource(projectDTO.getProjectType());
         // 不再保存status字段，由前端根据日期计算
+        
+        // 设置更新时间
+        project.setUpdateTime(LocalDateTime.now());
         
         boolean success = researchProjectService.updateProject(project);
         return success ? Result.success(true) : Result.fail("更新失败");
@@ -153,6 +165,12 @@ public class ResearchProjectController {
      */
     @DeleteMapping("/{id}")
     public Result<Boolean> deleteProject(@PathVariable("id") Long id) {
+        // 获取项目信息，以便处理附件删除（如果需要在服务端处理）
+        ResearchProject project = researchProjectService.getProjectById(id);
+        if (project == null) {
+            return Result.fail("项目不存在");
+        }
+        
         boolean success = researchProjectService.deleteProject(id);
         return success ? Result.success(true) : Result.fail("删除失败");
     }
