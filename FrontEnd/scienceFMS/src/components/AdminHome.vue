@@ -7,54 +7,65 @@
         <button class="logout-btn" @click="logout">登出</button>
       </div>
     </header>
-    
+
     <div class="content">
       <div class="tabs">
-        <div 
-          class="tab" 
+        <div
+          class="tab"
           :class="{ active: activeTab === 'dashboard' }"
           @click="setActiveTab('dashboard')"
         >
           系统概览
         </div>
-        <div 
-          class="tab" 
+        <div
+          class="tab"
           :class="{ active: activeTab === 'search' }"
           @click="setActiveTab('search')"
         >
           多维查询
         </div>
-        <div 
-          class="tab" 
+        <div
+          class="tab"
+          :class="{ active: activeTab === 'workload' }"
+          @click="setActiveTab('workload')"
+        >
+          工作量查询
+        </div>
+
+        <div
+          class="tab"
           :class="{ active: activeTab === 'users' }"
           @click="setActiveTab('users')"
         >
           用户管理
         </div>
-        <div 
-          class="tab" 
+        <div
+          class="tab"
           :class="{ active: activeTab === 'settings' }"
           @click="setActiveTab('settings')"
         >
           系统设置
         </div>
       </div>
-      
+
       <!-- 系统概览 -->
       <div v-if="activeTab === 'dashboard'" class="tab-content">
         <admin-dashboard />
       </div>
-      
+
       <!-- 多维查询 -->
       <div v-if="activeTab === 'search'" class="tab-content">
         <admin-multi-search />
       </div>
-      
+
       <!-- 用户管理 -->
       <div v-if="activeTab === 'users'" class="tab-content">
         <admin-user-management />
       </div>
-      
+      <!-- 工作量查询 -->
+      <div v-if="activeTab === 'workload'" class="tab-content">
+        <admin-workload />
+      </div>
       <!-- 系统设置 -->
       <div v-if="activeTab === 'settings'" class="tab-content">
         <div class="settings-container">
@@ -67,17 +78,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
-import * as auth from '../utils/auth';
-import AdminDashboard from './admin/AdminDashboard.vue';
-import AdminMultiSearch from './admin/AdminMultiSearch.vue';
-import AdminUserManagement from './admin/AdminUserManagement.vue';
-
+import { ref, onMounted, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import * as auth from "../utils/auth";
+import AdminDashboard from "./admin/AdminDashboard.vue";
+import AdminMultiSearch from "./admin/AdminMultiSearch.vue";
+import AdminUserManagement from "./admin/AdminUserManagement.vue";
+import AdminWorkload from "./admin/AdminWorkload.vue";
 const router = useRouter();
 const route = useRoute();
-const username = ref('');
-const activeTab = ref('dashboard');
+const username = ref("");
+const activeTab = ref("dashboard");
 
 // 从路由参数中获取初始activeTab
 onMounted(() => {
@@ -85,7 +96,7 @@ onMounted(() => {
   if (user) {
     username.value = user.username;
   }
-  
+
   // 如果路由中有参数，设置对应的标签页
   if (route.params.activeTab) {
     setActiveTab(route.params.activeTab);
@@ -100,7 +111,7 @@ const setActiveTab = (tab) => {
 // 登出
 const logout = () => {
   auth.logout();
-  router.push('/login');
+  router.push("/login");
 };
 </script>
 

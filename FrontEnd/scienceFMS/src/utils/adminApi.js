@@ -164,6 +164,26 @@ export const getSystemOverview = () => {
 };
 
 /**
+ * 获取教师科研工作量（分页）
+ * @param {Object} params - 查询参数，如 page, pageSize, keyword 等
+ * @returns {Promise}
+ */
+export const getWorkloadStats = (params) => {
+  return api.get('/admin/workload/query', { params });
+};
+/**
+ * 导出科研工作量 Excel 文件
+ * @param {Object} params - 查询参数（如筛选条件）
+ * @returns {Promise}
+ */
+export const exportWorkloadExcel = (params) => {
+  return api.get('/admin/workload/export', {
+    params,
+    responseType: 'blob'  // 指定为 blob 以便生成文件下载
+  });
+};
+
+/**
  * 获取系统用户列表
  * 
  * @param {Object} params - 查询参数
