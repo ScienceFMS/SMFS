@@ -31,7 +31,13 @@
         >
           工作量查询
         </div>
-
+        <div
+          class="tab"
+          :class="{ active: activeTab === 'analysis' }"
+          @click="setActiveTab('analysis')"
+        >
+          科研分析
+        </div>
         <div
           class="tab"
           :class="{ active: activeTab === 'users' }"
@@ -66,6 +72,10 @@
       <div v-if="activeTab === 'workload'" class="tab-content">
         <admin-workload />
       </div>
+      <!-- 科研分析 -->
+      <div v-if="activeTab === 'analysis'" class="tab-content">
+        <research-analysis />
+      </div>
       <!-- 系统设置 -->
       <div v-if="activeTab === 'settings'" class="tab-content">
         <div class="settings-container">
@@ -85,6 +95,8 @@ import AdminDashboard from "./admin/AdminDashboard.vue";
 import AdminMultiSearch from "./admin/AdminMultiSearch.vue";
 import AdminUserManagement from "./admin/AdminUserManagement.vue";
 import AdminWorkload from "./admin/AdminWorkload.vue";
+import ResearchAnalysis from "./admin/ResearchAnalysis.vue";
+
 const router = useRouter();
 const route = useRoute();
 const username = ref("");

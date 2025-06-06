@@ -42,6 +42,16 @@
           <div class="stat-label">科研项目</div>
         </div>
       </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon visit-icon">
+          <i class="fas fa-plane"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value">{{ stats.visitCount || 0 }}</div>
+          <div class="stat-label">出访记录</div>
+        </div>
+      </div>
     </div>
     
     <div class="features">
@@ -51,6 +61,12 @@
           <div class="feature-icon"><i class="fas fa-search"></i></div>
           <h4>多维查询</h4>
           <p>通过人员、类别、年度等条件检索科研成果</p>
+        </div>
+        
+        <div class="feature-card" @click="goToResearchAnalysis">
+          <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+          <h4>科研分析</h4>
+          <p>通过大模型分析科研趋势、高价值成果和学科分布</p>
         </div>
         
         <div class="feature-card" @click="goToUserManagement">
@@ -104,7 +120,8 @@ const stats = ref({
   userCount: 0,
   intellectualPropertyCount: 0,
   awardCount: 0,
-  projectCount: 0
+  projectCount: 0,
+  visitCount: 0
 });
 const activities = ref([]);
 
@@ -122,7 +139,8 @@ const fetchSystemOverview = async () => {
         userCount: 0,
         intellectualPropertyCount: 0,
         awardCount: 0,
-        projectCount: 0
+        projectCount: 0,
+        visitCount: 0
       };
       activities.value = [];
     }
@@ -132,7 +150,8 @@ const fetchSystemOverview = async () => {
       userCount: 0,
       intellectualPropertyCount: 0,
       awardCount: 0,
-      projectCount: 0
+      projectCount: 0,
+      visitCount: 0
     };
     activities.value = [];
   } finally {
@@ -176,6 +195,10 @@ const goToUserManagement = () => {
 
 const goToSettings = () => {
   router.push({ name: 'AdminHome', params: { activeTab: 'settings' } });
+};
+
+const goToResearchAnalysis = () => {
+  router.push({ name: 'AdminHome', params: { activeTab: 'analysis' } });
 };
 
 onMounted(() => {
@@ -252,6 +275,10 @@ h3 {
 
 .project-icon {
   background-color: #722ed1;
+}
+
+.visit-icon {
+  background-color: #13c2c2;
 }
 
 .stat-content {

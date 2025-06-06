@@ -24,4 +24,20 @@ public interface ResearchSummaryService {
      * @return 科研数据文本
      */
     String getTeacherResearchText(Long teacherId);
+    
+    /**
+     * 生成科研成果趋势分析、高价值成果识别和学科分布分析
+     * @param startYear 开始年份
+     * @param endYear 结束年份
+     * @return 分析结果（包含趋势分析、高价值成果排行和学科分布）
+     */
+    String generateResearchAnalysis(Integer startYear, Integer endYear);
+    
+    /**
+     * 收集指定时间范围内的所有科研成果数据文本
+     * @param startYear 开始年份
+     * @param endYear 结束年份
+     * @return 所有科研成果数据文本
+     */
+    String getAllResearchDataText(Integer startYear, Integer endYear);
 } 

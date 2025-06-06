@@ -21,4 +21,13 @@ public interface AwardMapper extends BaseMapper<Award> {
      */
     @Select("SELECT * FROM t_award WHERE teacher_id = #{teacherId} AND is_deleted = 0 ORDER BY award_date DESC")
     List<Award> findByTeacherId(@Param("teacherId") Long teacherId);
+
+    /**
+     * 根据时间范围查询奖项
+     * @param startYear 开始年份
+     * @param endYear 结束年份
+     * @return 奖项列表
+     */
+    @Select("SELECT * FROM t_award WHERE EXTRACT(YEAR FROM award_date) >= #{startYear} AND EXTRACT(YEAR FROM award_date) <= #{endYear} AND is_deleted = 0 ORDER BY award_date DESC")
+    List<Award> findByTimeRange(@Param("startYear") Integer startYear, @Param("endYear") Integer endYear);
 } 
