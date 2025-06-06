@@ -2,7 +2,6 @@ package hit.cs.sciencefms.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import hit.cs.sciencefms.common.Result;
-import hit.cs.sciencefms.common.ResultCode;
 import hit.cs.sciencefms.dto.LoginRequest;
 import hit.cs.sciencefms.dto.LoginResponse;
 import hit.cs.sciencefms.entity.User;
