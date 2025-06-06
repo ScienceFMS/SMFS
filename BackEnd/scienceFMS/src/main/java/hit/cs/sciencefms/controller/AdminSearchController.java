@@ -1,7 +1,6 @@
 package hit.cs.sciencefms.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import hit.cs.sciencefms.common.Result;
 import hit.cs.sciencefms.dto.SearchResultDTO;
 import hit.cs.sciencefms.service.AdminSearchService;

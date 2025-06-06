@@ -143,9 +143,6 @@ public class ResearchProjectController {
             return Result.fail("项目不存在");
         }
         
-        // 保存旧的附件URL，如果需要在服务端处理附件删除
-        String oldAttachments = project.getAttachments();
-        
         BeanUtils.copyProperties(projectDTO, project);
         project.setSource(projectDTO.getProjectType());
         // 不再保存status字段，由前端根据日期计算
