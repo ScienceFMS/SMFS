@@ -6,14 +6,13 @@
     
     <el-card class="settings-card">
       <el-tabs v-model="activeTab">
-        <el-tab-pane label="个人设置" name="personal">
           <h3>账号设置</h3>
           <el-form :model="personalForm" label-width="100px">
             <el-form-item label="用户名">
               <el-input v-model="personalForm.username" disabled></el-input>
             </el-form-item>
             <el-form-item label="修改密码">
-              <el-button type="primary">修改密码</el-button>
+              <el-button type="primary" @click="showPasswordDialog = true">修改密码</el-button>
             </el-form-item>
             <el-form-item label="邮箱">
               <el-input v-model="personalForm.email"></el-input>
@@ -25,104 +24,158 @@
               <el-button type="primary" @click="savePersonalSettings">保存设置</el-button>
             </el-form-item>
           </el-form>
-        </el-tab-pane>
-        
-        <el-tab-pane label="通知设置" name="notification">
-          <h3>通知偏好</h3>
-          <el-form :model="notificationForm" label-width="180px">
-            <el-form-item label="接收系统通知">
-              <el-switch v-model="notificationForm.systemNotify"></el-switch>
-            </el-form-item>
-            <el-form-item label="接收项目截止提醒">
-              <el-switch v-model="notificationForm.deadlineNotify"></el-switch>
-            </el-form-item>
-            <el-form-item label="接收科研成果更新提醒">
-              <el-switch v-model="notificationForm.achievementNotify"></el-switch>
-            </el-form-item>
-            <el-form-item label="接收邮件通知">
-              <el-switch v-model="notificationForm.emailNotify"></el-switch>
-            </el-form-item>
-            <el-form-item>
-              <el-button type="primary" @click="saveNotificationSettings">保存设置</el-button>
-            </el-form-item>
-          </el-form>
-        </el-tab-pane>
-        
-        <el-tab-pane label="系统设置" name="system">
-          <h3>系统偏好</h3>
-          <el-form :model="systemForm" label-width="100px">
-            <el-form-item label="语言">
-              <el-select v-model="systemForm.language">
-                <el-option label="简体中文" value="zh-CN"></el-option>
-                <el-option label="English" value="en-US"></el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="主题">
-              <el-select v-model="systemForm.theme">
-                <el-option label="默认主题" value="default"></el-option>
-                <el-option label="暗色主题" value="dark"></el-option>
-                <el-option label="高对比度" value="high-contrast"></el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="表格密度">
-              <el-radio-group v-model="systemForm.tableDensity">
-                <el-radio label="default">默认</el-radio>
-                <el-radio label="medium">中等</el-radio>
-                <el-radio label="small">紧凑</el-radio>
-              </el-radio-group>
-            </el-form-item>
-            <el-form-item>
-              <el-button type="primary" @click="saveSystemSettings">保存设置</el-button>
-            </el-form-item>
-          </el-form>
-        </el-tab-pane>
       </el-tabs>
     </el-card>
+    
+    <!-- 修改密码对话框 -->
+    <el-dialog
+      title="修改密码"
+      v-model="showPasswordDialog"
+      width="400px"
+    >
+      <el-form :model="passwordForm" label-width="100px" :rules="passwordRules" ref="passwordFormRef">
+        <el-form-item label="原密码" prop="oldPassword">
+          <el-input v-model="passwordForm.oldPassword" type="password" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="新密码" prop="newPassword">
+          <el-input v-model="passwordForm.newPassword" type="password" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="确认密码" prop="confirmPassword">
+          <el-input v-model="passwordForm.confirmPassword" type="password" show-password></el-input>
+        </el-form-item>
+      </el-form>
+      <template #footer>
+        <div class="dialog-footer">
+          <el-button @click="showPasswordDialog = false">取消</el-button>
+          <el-button type="primary" @click="updateUserPassword">确认修改</el-button>
+        </div>
+      </template>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 import { ElMessage } from 'element-plus';
+import { getTeacherProfile, updatePassword, updateUserInfo } from '../../utils/api';
+import router from '../../router';
 
 // 当前激活的标签页
 const activeTab = ref('personal');
 
 // 个人设置表单
 const personalForm = reactive({
-  username: '张教授',
-  email: 'zhang@example.edu.cn',
-  phone: '1391234567'
+  username: '',
+  email: '',
+  phone: ''
 });
 
-// 通知设置表单
-const notificationForm = reactive({
-  systemNotify: true,
-  deadlineNotify: true,
-  achievementNotify: true,
-  emailNotify: false
+// 显示密码修改对话框
+const showPasswordDialog = ref(false);
+
+// 密码修改表单
+const passwordForm = reactive({
+  oldPassword: '',
+  newPassword: '',
+  confirmPassword: ''
 });
 
-// 系统设置表单
-const systemForm = reactive({
-  language: 'zh-CN',
-  theme: 'default',
-  tableDensity: 'default'
+// 密码表单校验规则
+const passwordRules = {
+  oldPassword: [
+    { required: true, message: '请输入原密码', trigger: 'blur' }
+  ],
+  newPassword: [
+    { required: true, message: '请输入新密码', trigger: 'blur' },
+    { min: 6, message: '密码长度不能少于6位', trigger: 'blur' }
+  ],
+  confirmPassword: [
+    { required: true, message: '请确认新密码', trigger: 'blur' },
+    { 
+      validator: (rule, value, callback) => {
+        if (value !== passwordForm.newPassword) {
+          callback(new Error('两次输入的密码不一致'));
+        } else {
+          callback();
+        }
+      }, 
+      trigger: 'blur' 
+    }
+  ]
+};
+
+const passwordFormRef = ref(null);
+
+// 页面加载时获取用户信息
+onMounted(async () => {
+  try {
+    const res = await getTeacherProfile();
+    if (res.success && res.data) {
+      personalForm.username = res.data.username;
+      personalForm.email = res.data.email;
+      personalForm.phone = res.data.phone;
+    }
+  } catch (error) {
+    console.error('获取教师资料失败:', error);
+    ElMessage.error('获取教师资料失败');
+  }
 });
 
 // 保存个人设置
-const savePersonalSettings = () => {
-  ElMessage.success('个人设置保存成功');
+const savePersonalSettings = async () => {
+  try {
+    const res = await updateUserInfo({
+      username: personalForm.username,
+      email: personalForm.email,
+      phone: personalForm.phone
+    });
+    
+    // 判断后端返回结果
+    if (res.code === 200) {
+      ElMessage.success('个人设置保存成功');
+    } else {
+      ElMessage.error(res.message || '保存个人设置失败');
+    }
+  } catch (error) {
+    console.error('保存个人设置失败:', error);
+    ElMessage.error('保存个人设置失败');
+  }
 };
 
-// 保存通知设置
-const saveNotificationSettings = () => {
-  ElMessage.success('通知设置保存成功');
-};
-
-// 保存系统设置
-const saveSystemSettings = () => {
-  ElMessage.success('系统设置保存成功');
+// 修改密码
+const updateUserPassword = async () => {
+  try {
+    // 表单验证
+    await passwordFormRef.value.validate();
+    
+    // 提交请求
+    const res = await updatePassword({
+      username: personalForm.username,
+      oldPassword: passwordForm.oldPassword,
+      newPassword: passwordForm.newPassword
+    });
+    console.log(res);
+    
+    // 判断后端返回结果
+    if (res.code === 200) {
+      ElMessage.success('密码修改成功，请重新登录');
+      
+      // 清除登录状态
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      localStorage.removeItem('isLoggedIn');
+      
+      // 延迟跳转到登录页面
+      setTimeout(() => {
+        router.push('/login');
+      }, 1500);
+    } else {
+      ElMessage.error(res.message || '修改密码失败');
+    }
+  } catch (error) {
+    console.error('修改密码失败:', error);
+    ElMessage.error(error.message || '修改密码失败');
+  }
 };
 </script>
 
@@ -150,5 +203,10 @@ h3 {
   margin-bottom: 20px;
   font-weight: 500;
   color: #303133;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
 }
 </style> 

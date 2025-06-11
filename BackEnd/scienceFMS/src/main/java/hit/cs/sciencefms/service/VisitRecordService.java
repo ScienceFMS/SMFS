@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import hit.cs.sciencefms.entity.VisitRecord;
 import org.springframework.core.io.Resource;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
@@ -65,22 +64,6 @@ public interface VisitRecordService extends IService<VisitRecord> {
      * @return 出访记录
      */
     VisitRecord getVisitRecordById(Long id);
-    
-    /**
-     * 上传行程单文件
-     * 
-     * @param file 文件
-     * @return 文件URL
-     */
-    String uploadItineraryFile(MultipartFile file) throws IOException;
-    
-    /**
-     * 上传成果报告文件
-     * 
-     * @param file 文件
-     * @return 文件URL
-     */
-    String uploadReportFile(MultipartFile file) throws IOException;
     
     /**
      * 生成报销模板

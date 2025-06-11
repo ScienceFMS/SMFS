@@ -408,5 +408,92 @@ export const getReimbursementTemplate = (id) => {
   });
 };
 
+/**
+ * 修改用户密码
+ * @param {Object} data - 包含用户名和新旧密码
+ * @returns {Promise}
+ */
+export const updatePassword = (data) => {
+  return api.put('/user/password', data);
+};
+
+/**
+ * 更新用户基本信息（邮箱、手机号）
+ * @param {Object} data - 用户信息
+ * @returns {Promise}
+ */
+export const updateUserInfo = (data) => {
+  return api.put('/user/info', data);
+};
+
+/**
+ * 更新教师个人资料
+ * @param {Object} profileData - 教师个人资料
+ * @returns {Promise}
+ */
+export const updateTeacherProfile = (profileData) => {
+  return api.put('/teacher/profile/update', profileData);
+};
+
+/**
+ * 添加教师教育背景
+ * @param {Number} teacherId - 教师ID
+ * @param {Object} educationData - 教育背景信息
+ * @returns {Promise}
+ */
+export const addTeacherEducation = (teacherId, educationData) => {
+  return api.post(`/teacher/profile/${teacherId}/education`, educationData);
+};
+
+/**
+ * 更新教师教育背景
+ * @param {Number} educationId - 教育背景ID
+ * @param {Object} educationData - 教育背景信息
+ * @returns {Promise}
+ */
+export const updateTeacherEducation = (educationId, educationData) => {
+  return api.put(`/teacher/profile/education/${educationId}`, educationData);
+};
+
+/**
+ * 删除教师教育背景
+ * @param {Number} educationId - 教育背景ID
+ * @returns {Promise}
+ */
+export const deleteTeacherEducation = (educationId) => {
+  return api.delete(`/teacher/profile/education/${educationId}`);
+};
+
+/**
+ * 上传教师头像
+ * @param {FormData} formData - 包含头像文件和教师ID的表单数据
+ * @returns {Promise}
+ */
+export const uploadAvatar = (formData) => {
+  return api.post('/teacher/profile/upload-avatar', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+};
+
+/**
+ * 更新教师头像URL（前端直接上传到静态资源服务器后调用）
+ * @param {Object} data - 包含teacherId和fileUrl的对象
+ * @returns {Promise}
+ */
+export const updateAvatarUrl = (data) => {
+  return api.post('/teacher/profile/update-avatar-url', data);
+};
+
+/**
+ * 获取教师的科研成果摘要
+ * @param {Number} teacherId - 教师ID
+ * @returns {Promise}
+ */
+export const getResearchSummary = (teacherId) => {
+  return api.get(`/teacher/research-summary/generate/${teacherId}`);
+};
+
 // 导出api实例
 export default api; 

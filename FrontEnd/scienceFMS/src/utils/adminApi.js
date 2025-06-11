@@ -7,7 +7,7 @@ import { getToken } from './auth';
 // 创建axios实例
 const api = axios.create({
   baseURL: 'http://localhost:8082',
-  timeout: 10000,
+  timeout: 120000,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -161,6 +161,38 @@ export const getTeacherById = (id) => {
  */
 export const getSystemOverview = () => {
   return api.get('/admin/dashboard/overview');
+};
+
+/**
+ * 获取科研成果分析报告
+ * 
+ * @param {Object} params - 查询参数
+ * @param {Number} params.startYear - 起始年份（可选，默认2000）
+ * @param {Number} params.endYear - 结束年份（可选，默认当前年份）
+ * @returns {Promise}
+ */
+export const getResearchAnalysis = (params) => {
+  return api.get('/admin/dashboard/research-analysis', { params });
+};
+
+/**
+ * 获取教师科研工作量（分页）
+ * @param {Object} params - 查询参数，如 page, pageSize, keyword 等
+ * @returns {Promise}
+ */
+export const getWorkloadStats = (params) => {
+  return api.get('/admin/workload/query', { params });
+};
+/**
+ * 导出科研工作量 Excel 文件
+ * @param {Object} params - 查询参数（如筛选条件）
+ * @returns {Promise}
+ */
+export const exportWorkloadExcel = (params) => {
+  return api.get('/admin/workload/export', {
+    params,
+    responseType: 'blob'  // 指定为 blob 以便生成文件下载
+  });
 };
 
 /**
