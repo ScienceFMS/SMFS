@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
     <h2>系统概览</h2>
-    
+
     <div class="stats-cards">
       <div class="stat-card">
         <div class="stat-icon user-icon">
@@ -12,17 +12,19 @@
           <div class="stat-label">用户数</div>
         </div>
       </div>
-      
+
       <div class="stat-card">
         <div class="stat-icon ip-icon">
           <i class="fas fa-lightbulb"></i>
         </div>
         <div class="stat-content">
-          <div class="stat-value">{{ stats.intellectualPropertyCount || 0 }}</div>
+          <div class="stat-value">
+            {{ stats.intellectualPropertyCount || 0 }}
+          </div>
           <div class="stat-label">知识产权</div>
         </div>
       </div>
-      
+
       <div class="stat-card">
         <div class="stat-icon award-icon">
           <i class="fas fa-trophy"></i>
@@ -32,7 +34,7 @@
           <div class="stat-label">奖项</div>
         </div>
       </div>
-      
+
       <div class="stat-card">
         <div class="stat-icon project-icon">
           <i class="fas fa-project-diagram"></i>
@@ -42,7 +44,7 @@
           <div class="stat-label">科研项目</div>
         </div>
       </div>
-      
+
       <div class="stat-card">
         <div class="stat-icon visit-icon">
           <i class="fas fa-plane"></i>
@@ -53,7 +55,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="features">
       <h3>系统功能</h3>
       <div class="feature-cards">
@@ -62,28 +64,25 @@
           <h4>多维查询</h4>
           <p>通过人员、类别、年度等条件检索科研成果</p>
         </div>
-        
+        <div class="feature-card" @click="goToUserManagement">
+          <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
+          <h4>工作量查询</h4>
+          <p>根据学院考核文件自动计算每项成果的工作量</p>
+        </div>
+        <div class="feature-card" @click="goToSettings">
+          <div class="feature-icon"><i class="fas fa-cog"></i></div>
+          <h4>统计报表</h4>
+          <p>生成年终工作量统计表</p>
+        </div>
         <div class="feature-card" @click="goToResearchAnalysis">
           <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
           <h4>科研分析</h4>
           <p>通过大模型分析科研趋势、高价值成果和学科分布</p>
         </div>
-        
-        <div class="feature-card" @click="goToUserManagement">
-          <div class="feature-icon"><i class="fas fa-user-cog"></i></div>
-          <h4>用户管理</h4>
-          <p>管理系统用户账号和权限</p>
-        </div>
-        
-        <div class="feature-card" @click="goToSettings">
-          <div class="feature-icon"><i class="fas fa-cog"></i></div>
-          <h4>系统设置</h4>
-          <p>配置系统参数和权限规则</p>
-        </div>
       </div>
     </div>
-    
-    <div class="recent-activity">
+
+    <!-- <div class="recent-activity">
       <h3>最近活动</h3>
       <div v-if="loading" class="loading">
         <div class="loading-spinner">加载中...</div>
@@ -105,14 +104,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-import * as adminApi from '../../utils/adminApi';
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import * as adminApi from "../../utils/adminApi";
 
 const router = useRouter();
 const loading = ref(true);
@@ -121,7 +120,7 @@ const stats = ref({
   intellectualPropertyCount: 0,
   awardCount: 0,
   projectCount: 0,
-  visitCount: 0
+  visitCount: 0,
 });
 const activities = ref([]);
 
@@ -134,24 +133,27 @@ const fetchSystemOverview = async () => {
       stats.value = response.data.stats || {};
       activities.value = response.data.recentActivities || [];
     } else {
-      console.error('获取系统概览数据返回错误:', response.message || '未知错误');
+      console.error(
+        "获取系统概览数据返回错误:",
+        response.message || "未知错误"
+      );
       stats.value = {
         userCount: 0,
         intellectualPropertyCount: 0,
         awardCount: 0,
         projectCount: 0,
-        visitCount: 0
+        visitCount: 0,
       };
       activities.value = [];
     }
   } catch (error) {
-    console.error('获取系统概览数据失败:', error);
+    console.error("获取系统概览数据失败:", error);
     stats.value = {
       userCount: 0,
       intellectualPropertyCount: 0,
       awardCount: 0,
       projectCount: 0,
-      visitCount: 0
+      visitCount: 0,
     };
     activities.value = [];
   } finally {
@@ -162,43 +164,43 @@ const fetchSystemOverview = async () => {
 // 根据活动类型获取对应的图标
 const getActivityIcon = (type) => {
   switch (type) {
-    case 'LOGIN':
-      return 'fas fa-sign-in-alt';
-    case 'CREATE':
-      return 'fas fa-plus';
-    case 'UPDATE':
-      return 'fas fa-edit';
-    case 'DELETE':
-      return 'fas fa-trash';
-    case 'EXPORT':
-      return 'fas fa-file-export';
+    case "LOGIN":
+      return "fas fa-sign-in-alt";
+    case "CREATE":
+      return "fas fa-plus";
+    case "UPDATE":
+      return "fas fa-edit";
+    case "DELETE":
+      return "fas fa-trash";
+    case "EXPORT":
+      return "fas fa-file-export";
     default:
-      return 'fas fa-info-circle';
+      return "fas fa-info-circle";
   }
 };
 
 // 格式化日期时间
 const formatDateTime = (dateTimeStr) => {
-  if (!dateTimeStr) return '';
+  if (!dateTimeStr) return "";
   const date = new Date(dateTimeStr);
-  return date.toLocaleString('zh-CN');
+  return date.toLocaleString("zh-CN");
 };
 
 // 页面跳转函数
 const goToMultiSearch = () => {
-  router.push({ name: 'AdminHome', params: { activeTab: 'search' } });
+  router.push({ name: "AdminHome", params: { activeTab: "search" } });
 };
 
 const goToUserManagement = () => {
-  router.push({ name: 'AdminHome', params: { activeTab: 'users' } });
+  router.push({ name: "AdminHome", params: { activeTab: "users" } });
 };
 
 const goToSettings = () => {
-  router.push({ name: 'AdminHome', params: { activeTab: 'settings' } });
+  router.push({ name: "AdminHome", params: { activeTab: "settings" } });
 };
 
 const goToResearchAnalysis = () => {
-  router.push({ name: 'AdminHome', params: { activeTab: 'analysis' } });
+  router.push({ name: "AdminHome", params: { activeTab: "analysis" } });
 };
 
 onMounted(() => {
@@ -343,7 +345,8 @@ h3 {
   padding: 20px;
 }
 
-.loading, .no-data {
+.loading,
+.no-data {
   padding: 30px;
   text-align: center;
   color: #666;
