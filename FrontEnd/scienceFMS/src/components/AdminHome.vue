@@ -33,25 +33,32 @@
         </div>
         <div
           class="tab"
+          :class="{ active: activeTab === 'statistic' }"
+          @click="setActiveTab('statistic')"
+        >
+          统计报表
+        </div>
+        <div
+          class="tab"
           :class="{ active: activeTab === 'analysis' }"
           @click="setActiveTab('analysis')"
         >
           科研分析
         </div>
-        <div
+        <!-- <div
           class="tab"
           :class="{ active: activeTab === 'users' }"
           @click="setActiveTab('users')"
         >
           用户管理
-        </div>
-        <div
+        </div> -->
+        <!-- <div
           class="tab"
           :class="{ active: activeTab === 'settings' }"
           @click="setActiveTab('settings')"
         >
           系统设置
-        </div>
+        </div> -->
       </div>
 
       <!-- 系统概览 -->
@@ -64,25 +71,29 @@
         <admin-multi-search />
       </div>
 
-      <!-- 用户管理 -->
+      <!-- 用户管理
       <div v-if="activeTab === 'users'" class="tab-content">
         <admin-user-management />
-      </div>
+      </div> -->
       <!-- 工作量查询 -->
       <div v-if="activeTab === 'workload'" class="tab-content">
         <admin-workload />
+      </div>
+      <!-- 统计报表 -->
+      <div v-if="activeTab === 'statistic'" class="tab-content">
+        <admin-statistic />
       </div>
       <!-- 科研分析 -->
       <div v-if="activeTab === 'analysis'" class="tab-content">
         <research-analysis />
       </div>
-      <!-- 系统设置 -->
+      <!-- 系统设置
       <div v-if="activeTab === 'settings'" class="tab-content">
         <div class="settings-container">
           <h2>系统设置</h2>
           <p>系统设置功能待实现...</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -96,6 +107,7 @@ import AdminMultiSearch from "./admin/AdminMultiSearch.vue";
 import AdminUserManagement from "./admin/AdminUserManagement.vue";
 import AdminWorkload from "./admin/AdminWorkload.vue";
 import ResearchAnalysis from "./admin/ResearchAnalysis.vue";
+import AdminStatistic from "./admin/AdminStatistic.vue";
 
 const router = useRouter();
 const route = useRoute();
