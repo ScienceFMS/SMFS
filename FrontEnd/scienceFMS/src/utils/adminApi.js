@@ -6,7 +6,7 @@ import { getToken } from './auth';
 
 // 创建axios实例
 const api = axios.create({
-  baseURL: 'http://localhost:8082',
+  baseURL: 'http://120.46.48.74:8082',
   timeout: 120000,
   headers: {
     'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ export const searchResults = (params) => {
 export const exportSearchResults = (params) => {
   // 使用blob响应类型获取Excel文件
   return axios({
-    url: 'http://localhost:8082/admin/search/export',
+    url: 'http://120.46.48.74:8082/admin/search/export',
     method: 'GET',
     responseType: 'blob',
     params,
