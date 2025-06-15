@@ -72,7 +72,7 @@
             <div class="user-info">
               <el-dropdown>
                 <span class="user-dropdown">
-                  <el-avatar :size="32" icon="Avatar"></el-avatar>
+                  <el-avatar :size="32" :src="avatarUrl" icon="Avatar"></el-avatar>
                   <span class="username">{{ username }}</span>
                   <el-icon><CaretBottom /></el-icon>
                 </span>
@@ -107,6 +107,7 @@ import {
 const router = useRouter();
 const route = useRoute();
 const username = ref('');
+const avatarUrl = ref('');
 
 // 计算当前激活的菜单项
 const activeMenu = computed(() => {
@@ -131,6 +132,16 @@ onMounted(() => {
   const user = auth.getCurrentUser();
   if (user) {
     username.value = user.username;
+  }
+  
+  // 从localStorage获取头像URL
+  try {
+    const storedAvatarUrl = localStorage.getItem('userAvatarUrl');
+    if (storedAvatarUrl) {
+      avatarUrl.value = storedAvatarUrl;
+    }
+  } catch (error) {
+    console.error('无法访问localStorage:', error);
   }
 });
 

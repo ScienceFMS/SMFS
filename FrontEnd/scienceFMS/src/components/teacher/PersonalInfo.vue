@@ -311,8 +311,12 @@ const fetchUserInfo = async () => {
   try {
     const response = await getTeacherProfile();
     console.log('[PersonalInfo] 获取个人资料响应:', response);
-    if (response.success) {
+          if (response.success) {
       userInfo.value = response.data;
+      // 保存头像URL到localStorage
+      if (response.data.avatarUrl) {
+        localStorage.setItem('userAvatarUrl', response.data.avatarUrl);
+      }
     } else {
       ElMessage.error('获取个人信息失败');
     }
@@ -587,8 +591,8 @@ const uploadAvatar = async (options) => {
       fileUrl: uploadResult.url,
       fileName: uploadResult.fileName
     });
-    
-    if (updateResult.success) {
+    console.log('[PersonalInfo] 更新头像URL:', updateResult);
+    if (updateResult.code === 200) {
       // 更新头像URL
       editForm.value.avatarUrl = uploadResult.url;
       ElMessage.success('头像上传成功');
