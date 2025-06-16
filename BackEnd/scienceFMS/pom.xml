@@ -134,7 +134,6 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>hit.cs.sciencefms.ScienceFmsApplication</mainClass>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
