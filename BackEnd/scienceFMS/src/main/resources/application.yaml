@@ -43,6 +43,10 @@ logging:
   level:
     root: info
     hit.cs.sciencefms: debug
+    # LangChain4j相关日志配置
+    dev.langchain4j: debug
+    dev.langchain4j.model.qianfan: trace
+    org.apache.http: debug
   file:
     name: logs/sciencefms.log
   pattern:
@@ -66,5 +70,7 @@ langchain4j:
       api-key: Qy8xDTNUukWWFyY1lEOXdsQl
       secret-key: RbCY7XFNjX9KtvSiQvUoZJ85WhvVMScf
       model-name: Yi-34B-Chat
+      # 明确指定API端点名称
+      endpoint: completions
       temperature: 0.3
       timeout: 60s 

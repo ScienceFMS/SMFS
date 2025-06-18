@@ -3,6 +3,10 @@ package hit.cs.sciencefms.service.impl;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.input.PromptTemplate;
+import dev.langchain4j.data.message.ChatMessage;
+import dev.langchain4j.data.message.SystemMessage;
+import dev.langchain4j.data.message.UserMessage;
+import dev.langchain4j.model.chat.request.ChatRequest;
 import hit.cs.sciencefms.entity.Award;
 import hit.cs.sciencefms.entity.IntellectualProperty;
 import hit.cs.sciencefms.entity.ResearchProject;
@@ -14,14 +18,17 @@ import hit.cs.sciencefms.mapper.ResearchProjectMapper;
 import hit.cs.sciencefms.mapper.TeacherMapper;
 import hit.cs.sciencefms.mapper.VisitRecordMapper;
 import hit.cs.sciencefms.service.ResearchSummaryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 public class ResearchSummaryServiceImpl implements ResearchSummaryService {
 
@@ -79,8 +86,24 @@ public class ResearchSummaryServiceImpl implements ResearchSummaryService {
         
         Prompt prompt = promptTemplate.apply(variables);
         
-        // 调用大模型生成摘要
-        return chatLanguageModel.generate(prompt.text());
+        // 记录输入日志
+        log.info("发送到大模型的请求内容: {}", prompt.text());
+        
+        try {
+            // 调用大模型生成摘要
+            List<ChatMessage> messages = new ArrayList<>();
+            messages.add(new UserMessage(prompt.text()));
+            ChatRequest chatRequest = ChatRequest.builder()
+                    .messages(messages)
+                    .build();
+            String result = chatLanguageModel.doChat(chatRequest).aiMessage().text();
+            // 记录输出日志
+            log.info("接收到大模型的响应: {}", result);
+            return result;
+        } catch (Exception e) {
+            log.error("调用大模型生成摘要失败", e);
+            return "生成摘要失败: " + e.getMessage();
+        }
     }
     
     @Override
@@ -128,8 +151,25 @@ public class ResearchSummaryServiceImpl implements ResearchSummaryService {
         
         Prompt prompt = promptTemplate.apply(variables);
         
-        // 调用大模型生成趋势分析
-        return chatLanguageModel.generate(prompt.text());
+        // 记录输入日志（仅记录提示模板，不记录完整科研数据以避免日志过大）
+        log.info("发送趋势分析请求到大模型，时间范围: {}年至{}年, 数据长度: {}", 
+                startYear, endYear, researchDataText.length());
+        
+        try {
+            // 调用大模型生成趋势分析
+            List<ChatMessage> messages = new ArrayList<>();
+            messages.add(new UserMessage(prompt.text()));
+            ChatRequest chatRequest = ChatRequest.builder()
+                    .messages(messages)
+                    .build();
+            String result = chatLanguageModel.doChat(chatRequest).aiMessage().text();
+            // 记录输出日志
+            log.info("接收到大模型的趋势分析响应: {}", result);
+            return result;
+        } catch (Exception e) {
+            log.error("调用大模型生成趋势分析失败", e);
+            return "生成趋势分析失败: " + e.getMessage();
+        }
     }
     
     /**
@@ -156,8 +196,25 @@ public class ResearchSummaryServiceImpl implements ResearchSummaryService {
         
         Prompt prompt = promptTemplate.apply(variables);
         
-        // 调用大模型生成高价值成果分析
-        return chatLanguageModel.generate(prompt.text());
+        // 记录输入日志
+        log.info("发送高价值成果分析请求到大模型，时间范围: {}年至{}年, 数据长度: {}", 
+                startYear, endYear, researchDataText.length());
+        
+        try {
+            // 调用大模型生成高价值成果分析
+            List<ChatMessage> messages = new ArrayList<>();
+            messages.add(new UserMessage(prompt.text()));
+            ChatRequest chatRequest = ChatRequest.builder()
+                    .messages(messages)
+                    .build();
+            String result = chatLanguageModel.doChat(chatRequest).aiMessage().text();
+            // 记录输出日志
+            log.info("接收到大模型的高价值成果分析响应: {}", result);
+            return result;
+        } catch (Exception e) {
+            log.error("调用大模型生成高价值成果分析失败", e);
+            return "生成高价值成果分析失败: " + e.getMessage();
+        }
     }
     
     /**
@@ -184,8 +241,25 @@ public class ResearchSummaryServiceImpl implements ResearchSummaryService {
         
         Prompt prompt = promptTemplate.apply(variables);
         
-        // 调用大模型生成学科分布分析
-        return chatLanguageModel.generate(prompt.text());
+        // 记录输入日志
+        log.info("发送学科分布分析请求到大模型，时间范围: {}年至{}年, 数据长度: {}", 
+                startYear, endYear, researchDataText.length());
+        
+        try {
+            // 调用大模型生成学科分布分析
+            List<ChatMessage> messages = new ArrayList<>();
+            messages.add(new UserMessage(prompt.text()));
+            ChatRequest chatRequest = ChatRequest.builder()
+                    .messages(messages)
+                    .build();
+            String result = chatLanguageModel.doChat(chatRequest).aiMessage().text();
+            // 记录输出日志
+            log.info("接收到大模型的学科分布分析响应: {}", result);
+            return result;
+        } catch (Exception e) {
+            log.error("调用大模型生成学科分布分析失败", e);
+            return "生成学科分布分析失败: " + e.getMessage();
+        }
     }
     
     @Override

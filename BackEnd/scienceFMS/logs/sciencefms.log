@@ -954,3 +954,200 @@ org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found:
 2025-06-15 21:34:20.687 [http-nio-8082-exec-8] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
 2025-06-15 21:34:30.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-06-15 21:34:30.529 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-06-18 13:07:15.922 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Starting ScienceFmsApplication using Java 17.0.10 with PID 16976 (D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS\target\classes started by DELL in D:\Codes\SchoolProject\Java\SoftwareProjection\scienceSystem\BackEnd\scienceFMS)
+2025-06-18 13:07:15.924 [main] DEBUG hit.cs.sciencefms.ScienceFmsApplication - Running with Spring Boot v3.0.2, Spring v6.0.4
+2025-06-18 13:07:15.924 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-18 13:07:17.053 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-06-18 13:07:17.060 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-18 13:07:17.061 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2025-06-18 13:07:17.122 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-18 13:07:17.122 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1169 ms
+2025-06-18 13:07:17.194 [main] DEBUG hit.cs.sciencefms.config.JwtFilter - Filter 'jwtFilter' configured for use
+2025-06-18 13:07:17.835 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-06-18 13:07:17.971 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-06-18 13:07:17.977 [main] INFO  hit.cs.sciencefms.ScienceFmsApplication - Started ScienceFmsApplication in 2.354 seconds (process running for 2.748)
+2025-06-18 13:07:56.479 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-18 13:07:56.479 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-18 13:07:56.480 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-18 13:07:56.518 [http-nio-8082-exec-1] ERROR hit.cs.sciencefms.util.JwtUtil - JWT验证失败: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2025-06-18 13:08:02.699 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - 用户登录: teacher1
+2025-06-18 13:08:02.726 [http-nio-8082-exec-6] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @1d296da
+2025-06-18 13:08:02.736 [http-nio-8082-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-06-18 13:08:03.043 [http-nio-8082-exec-6] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a8f481e
+2025-06-18 13:08:03.044 [http-nio-8082-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-06-18 13:08:03.052 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,role,real_name,email,phone,status,login_fail_count,create_time,update_time FROM t_user WHERE (username = ?)
+2025-06-18 13:08:03.059 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-18 13:08:03.105 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.UserMapper.selectList - <==      Total: 1
+2025-06-18 13:08:03.109 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==>  Preparing: UPDATE t_user SET login_fail_count = 0 WHERE username = ?
+2025-06-18 13:08:03.110 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - ==> Parameters: teacher1(String)
+2025-06-18 13:08:03.144 [http-nio-8082-exec-6] DEBUG h.c.s.mapper.UserMapper.resetLoginFailCount - <==    Updates: 1
+2025-06-18 13:08:03.158 [http-nio-8082-exec-6] INFO  hit.cs.sciencefms.service.impl.UserServiceImpl - JWT token: eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoidGVhY2hlciIsInVzZXJJZCI6MiwidXNlcm5hbWUiOiJ0ZWFjaGVyMSIsImlhdCI6MTc1MDIyMzI4MywiZXhwIjoxNzUwMzA5NjgzfQ.2nqiVWR2tfJ5fG-OWtJmVxc-DSJC-k7Daoqe-dE4pbOrQRqyN7oyDkHosqoNIIB7rPl_F3LxJJzhCLefLop3UA
+2025-06-18 13:08:03.160 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE is_deleted=0 AND (username = ?)
+2025-06-18 13:08:03.160 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - ==> Parameters: teacher1(String)
+2025-06-18 13:08:03.192 [http-nio-8082-exec-6] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectList - <==      Total: 1
+2025-06-18 13:08:03.250 [http-nio-8082-exec-2] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-18 13:08:03.256 [http-nio-8082-exec-2] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: hit.cs.sciencefms.controller.TeacherProfileController
+2025-06-18 13:08:03.258 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==>  Preparing: SELECT * FROM t_teacher WHERE username = ? AND is_deleted = 0
+2025-06-18 13:08:03.260 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - ==> Parameters: teacher1(String)
+2025-06-18 13:08:03.296 [http-nio-8082-exec-2] DEBUG h.c.s.mapper.TeacherMapper.selectByUsername - <==      Total: 1
+2025-06-18 13:08:03.297 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==>  Preparing: SELECT * FROM t_teacher_education WHERE teacher_id = ? AND is_deleted = 0 ORDER BY end_year DESC
+2025-06-18 13:08:03.299 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - ==> Parameters: 1(Long)
+2025-06-18 13:08:03.329 [http-nio-8082-exec-2] DEBUG h.c.s.m.TeacherEducationMapper.selectByTeacherId - <==      Total: 4
+2025-06-18 13:08:04.650 [http-nio-8082-exec-4] INFO  hit.cs.sciencefms.util.JwtUtil - JWT验证成功
+2025-06-18 13:08:04.652 [http-nio-8082-exec-4] WARN  o.s.core.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: hit.cs.sciencefms.controller.ResearchSummaryController
+2025-06-18 13:08:04.685 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==>  Preparing: SELECT id,username,real_name,gender,birth_date,title,department,position,research_area,email,phone,office_location,avatar_url,create_time,update_time,is_deleted FROM t_teacher WHERE id=? AND is_deleted=0
+2025-06-18 13:08:04.685 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - ==> Parameters: 1(Long)
+2025-06-18 13:08:04.718 [http-nio-8082-exec-4] DEBUG hit.cs.sciencefms.mapper.TeacherMapper.selectById - <==      Total: 1
+2025-06-18 13:08:04.719 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.ResearchProjectMapper.findByTeacherId - ==>  Preparing: SELECT * FROM t_research_project WHERE teacher_id = ? AND is_deleted = 0 ORDER BY start_date DESC
+2025-06-18 13:08:04.719 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.ResearchProjectMapper.findByTeacherId - ==> Parameters: 1(Long)
+2025-06-18 13:08:04.755 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.ResearchProjectMapper.findByTeacherId - <==      Total: 8
+2025-06-18 13:08:04.756 [http-nio-8082-exec-4] DEBUG h.c.s.m.IntellectualPropertyMapper.findByTeacherId - ==>  Preparing: SELECT * FROM t_intellectual_property WHERE teacher_id = ? AND is_deleted = 0 ORDER BY auth_date DESC
+2025-06-18 13:08:04.757 [http-nio-8082-exec-4] DEBUG h.c.s.m.IntellectualPropertyMapper.findByTeacherId - ==> Parameters: 1(Long)
+2025-06-18 13:08:04.788 [http-nio-8082-exec-4] DEBUG h.c.s.m.IntellectualPropertyMapper.findByTeacherId - <==      Total: 3
+2025-06-18 13:08:04.789 [http-nio-8082-exec-4] DEBUG h.cs.sciencefms.mapper.AwardMapper.findByTeacherId - ==>  Preparing: SELECT * FROM t_award WHERE teacher_id = ? AND is_deleted = 0 ORDER BY award_date DESC
+2025-06-18 13:08:04.789 [http-nio-8082-exec-4] DEBUG h.cs.sciencefms.mapper.AwardMapper.findByTeacherId - ==> Parameters: 1(Long)
+2025-06-18 13:08:04.821 [http-nio-8082-exec-4] DEBUG h.cs.sciencefms.mapper.AwardMapper.findByTeacherId - <==      Total: 3
+2025-06-18 13:08:04.822 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.findByTeacherId - ==>  Preparing: SELECT * FROM t_visit_record WHERE teacher_id = ? AND is_deleted = 0 ORDER BY start_date DESC
+2025-06-18 13:08:04.823 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.findByTeacherId - ==> Parameters: 1(Long)
+2025-06-18 13:08:04.852 [http-nio-8082-exec-4] DEBUG h.c.s.mapper.VisitRecordMapper.findByTeacherId - <==      Total: 4
+2025-06-18 13:08:04.862 [http-nio-8082-exec-4] INFO  h.c.s.service.impl.ResearchSummaryServiceImpl - 发送到大模型的请求内容: 你是一位科研助手，请根据以下科研成果详情，生成一段300字以内的中文摘要，语言要求简洁、专业，适合展示在成果展示平台上。
+
+成果详情：
+教师姓名：张小hui
+职称：教授
+研究方向：人工智能、大数据分析
+
+一、科研项目：
+1. 项目名称：人工智能辅助教学系统研发
+   项目来源：横向项目
+   项目经费：350000.00元
+   项目时间：2026-03-04 至 2026-03-18
+   项目角色：参与者
+
+2. 项目名称：新型储能材料开发
+   项目来源：省自然科学基金
+   项目经费：332.00元
+   项目时间：2025-05-03 至 2025-06-03
+   项目角色：主要成员
+
+3. 项目名称：多模态语音识别系统开发	
+   项目来源：省自然科学基金
+   项目经费：235.00元
+   项目时间：2024-05-14 至 2024-06-18
+   项目角色：负责人
+
+4. 项目名称：智慧交通数据平台
+   项目来源：省部级
+   项目经费：1507500.00元
+   项目时间：2024-04-10 至 2025-04-22
+   项目角色：负责人
+
+5. 项目名称：高效能源管理智能系统
+   项目来源：省自然科学基金
+   项目经费：520000.00元
+   项目时间：2023-11-15 至 2025-11-14
+   项目角色：负责人
+
+6. 项目名称：区块链在供应链金融中的理论研究
+   项目来源：横向
+   项目经费：300000.00元
+   项目时间：2023-07-12 至 2026-06-09
+   项目角色：主要成员
+
+7. 项目名称：智能驾驶决策系统开发
+   项目来源：横向项目
+   项目经费：1500000.00元
+   项目时间：2020-05-01 至 2022-04-30
+   项目角色：负责人
+
+8. 项目名称：多源异构大数据融合技术研究
+   项目来源：国家自然科学基金
+   项目经费：750000.00元
+   项目时间：2018-01-15 至 2020-12-31
+   项目角色：负责人
+
+二、知识产权：
+1. 名称：云计算资源调度优化方法
+   类型：专利 - 发明专利
+   授权号：CN202389475D
+   授权日期：2023-06-25
+
+2. 名称：一种基于深度学习的图像识别方法
+   类型：专利 - 发明专利
+   授权号：CN123456789A
+   授权日期：2022-05-20
+
+3. 名称：区块链数据安全传输系统
+   类型：专利 - 实用新型专利
+   授权号：CN987654321B
+   授权日期：2021-02-25
+
+三、获奖情况：
+1. 奖项名称：全国科技进步奖
+   获奖等级：二等奖
+   颁发单位：教育部
+   获奖日期：2022-12-04
+
+2. 奖项名称：互联网创新应用奖
+   获奖等级：金奖
+   颁发单位：中国互联网协会
+   获奖日期：2022-11-20
+
+3. 奖项名称：省科技创新奖
+   获奖等级：一等奖
+   颁发单位：省科技厅
+   获奖日期：2021-09-15
+
+四、学术交流：
+1. 出访目的：参加SIGMOD数据库会议
+   出访地点：加拿大·多伦多
+   出访时间：2023-07-12 至 2023-07-12
+   出访成果：发表高水平论文
+
+2. 出访目的：访学调研
+   出访地点：英国剑桥
+   出访时间：2023-04-03 至 2023-06-13
+   出访成果：撰写SCI论文2篇，申请专利1项
+
+3. 出访目的：访问哈佛大学交流
+   出访地点：美国·波士顿
+   出访时间：2023-03-05 至 2023-03-20
+   出访成果：签署合作协议
+
+4. 出访目的：参加IEEE国际会议
+   出访地点：美国·旧金山
+   出访时间：2022-10-15 至 2022-10-22
+   出访成果：发表论文并建立合作关系
+
+
+
+请输出摘要：
+
+2025-06-18 13:08:04.893 [http-nio-8082-exec-4] DEBUG d.l.c.m.qianfan.client.RequestLoggingInterceptor - Request:
+- method: GET
+- url: https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=Qy8xDTNUukWWFyY1lEOXdsQl&client_secret=RbCY7XFNjX9KtvSiQvUoZJ85WhvVMScf
+- headers: [Content-Type: application/json], [Authorization: Bearer Qy8xDTNUukWWFyY1lEOXdsQl]
+- body: 
+2025-06-18 13:08:05.237 [http-nio-8082-exec-4] DEBUG d.l.c.m.qianfan.client.ResponseLoggingInterceptor - Response:
+- status code: 200
+- headers: [cache-control: no-store], [content-type: application/json], [date: Wed, 18 Jun 2025 05:08:05 GMT], [p3p: CP=" OTI DSP COR IVA OUR IND COM "], [server: Apache], [set-cookie: BAIDUID=A367B1F84796E65B4397A295DFEFB9A8:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2145916555; path=/; domain=.baidubce.com; version=1], [vary: Accept-Encoding]
+- body: {"refresh_token":"25.b92fa1400124419b192ab816e8e6044e.315360000.2065583285.282335-119129975","expires_in":2592000,"session_key":"9mzdCPPT9OPnjs8T4OHRI6s8rPiItNYkM+V\/D\/HMFVDmpLXpsBRFQ7lr5zyPiHwaKeFPKdUgGpGO2cPJwIryM0QRaohdFgo=","access_token":"24.37adf588ba26e96eb22b347982c35710.2592000.1752815285.282335-119129975","scope":"public ai_custom_qianfan_bloomz_7b_compressed ai_custom_yiyan_com ai_custom_yiyan_com_128k ai_custom_yiyan_com_agent_speed_32k ai_custom_yiyan_com_aquilachat_7b ai_custom_yiyan_com_bce_reranker_base ai_custom_yiyan_com_bloomz7b1 ai_custom_yiyan_com_chatglm2_6b_32k ai_custom_yiyan_com_codellama_7b_ins ai_custom_yiyan_com_eb_pro ai_custom_yiyan_com_eb_turbo_pro ai_custom_yiyan_com_eb_turbo_pro_128k ai_custom_yiyan_com_emb_bge_large_en ai_custom_yiyan_com_emb_bge_large_zh ai_custom_yiyan_com_emb_tao_8k ai_custom_yiyan_com_emb_text ai_custom_yiyan_com_ernie_3.5_128k_preview ai_custom_yiyan_com_ernie_3.5_8k_0701 ai_custom_yiyan_com_ernie_35_8k_0613 ai_custom_yiyan_com_ernie_35_8k_preview ai_custom_yiyan_com_ernie_4.0_turbo_128k ai_custom_yiyan_com_ernie_4.0_turbo_8k_0628 ai_custom_yiyan_com_ernie_4.0_turbo_8k_latest ai_custom_yiyan_com_ernie_40_8k_0613 ai_custom_yiyan_com_ernie_40_8k_beta ai_custom_yiyan_com_ernie_40_8k_preview ai_custom_yiyan_com_ernie_40_turbo_8k(2) ai_custom_yiyan_com_ernie_40_turbo_8k_preview ai_custom_yiyan_com_ernie_char_8k ai_custom_yiyan_com_ernie_char_fiction_8k ai_custom_yiyan_com_ernie_func_8k ai_custom_yiyan_com_ernie_lite_8k ai_custom_yiyan_com_ernie_lite_pro_128k ai_custom_yiyan_com_ernie_novel_8k ai_custom_yiyan_com_ernie_speed_pro_128k ai_custom_yiyan_com_ernie_tiny_8k ai_custom_yiyan_com_fiction_8k_preview ai_custom_yiyan_com_fuyu_8b ai_custom_yiyan_com_gemma_7b_it ai_custom_yiyan_com_llama2_13b ai_custom_yiyan_com_llama2_70b ai_custom_yiyan_com_llama2_7b ai_custom_yiyan_com_llama3_70b ai_custom_yiyan_com_llama3_8b ai_custom_yiyan_com_mixtral_8x7b ai_custom_yiyan_com_qf_chinese_llama_2_13b ai_custom_yiyan_com_qf_chinese_llama_2_70b ai_custom_yiyan_com_qianfan_agent_lite_8k ai_custom_yiyan_com_qianfan_agent_speed_8k ai_custom_yiyan_com_qianfan_chinese_llama_2_7b ai_custom_yiyan_com_qianfan_dynamic_8k ai_custom_yiyan_com_sd_xl ai_custom_yiyan_com_sqlcoder_7b ai_custom_yiyan_com_tokenizer_eb ai_custom_yiyan_com_xuanyuan_70b_chat ai_custom_yiyan_com_yi_34b brain_all_scope wise_adapt lebo_resource_base lightservice_public hetu_basic lightcms_map_poi kaidian_kaidian ApsMisTest_Test\u6743\u9650 vis-classify_flower lpq_\u5f00\u653e cop_helloScope ApsMis_fangdi_permission smartapp_snsapi_base smartapp_mapp_dev_manage iop_autocar oauth_tp_app smartapp_smart_game_openapi oauth_sessionkey smartapp_swanid_verify smartapp_opensource_openapi smartapp_opensource_recapi fake_face_detect_\u5f00\u653eScope vis-ocr_\u865a\u62df\u4eba\u7269\u52a9\u7406 idl-video_\u865a\u62df\u4eba\u7269\u52a9\u7406 smartapp_component smartapp_search_plugin avatar_video_test b2b_tp_openapi b2b_tp_openapi_online smartapp_gov_aladin_to_xcx","session_secret":"d3731e6535398f6ad05ab0c037b70612"}
+
+2025-06-18 13:08:05.252 [http-nio-8082-exec-4] DEBUG d.l.c.m.qianfan.client.RequestLoggingInterceptor - Request:
+- method: POST
+- url: https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions?access_token=24.37adf588ba26e96eb22b347982c35710.2592000.1752815285.282335-119129975
+- headers: [Authorization: Bearer Qy8xDTNUukWWFyY1lEOXdsQl]
+- body: {
+  "messages" : [ {
+    "role" : "user",
+    "content" : "你是一位科研助手，请根据以下科研成果详情，生成一段300字以内的中文摘要，语言要求简洁、专业，适合展示在成果展示平台上。\n\n成果详情：\n教师姓名：张小hui\n职称：教授\n研究方向：人工智能、大数据分析\n\n一、科研项目：\n1. 项目名称：人工智能辅助教学系统研发\n   项目来源：横向项目\n   项目经费：350000.00元\n   项目时间：2026-03-04 至 2026-03-18\n   项目角色：参与者\n\n2. 项目名称：新型储能材料开发\n   项目来源：省自然科学基金\n   项目经费：332.00元\n   项目时间：2025-05-03 至 2025-06-03\n   项目角色：主要成员\n\n3. 项目名称：多模态语音识别系统开发\t\n   项目来源：省自然科学基金\n   项目经费：235.00元\n   项目时间：2024-05-14 至 2024-06-18\n   项目角色：负责人\n\n4. 项目名称：智慧交通数据平台\n   项目来源：省部级\n   项目经费：1507500.00元\n   项目时间：2024-04-10 至 2025-04-22\n   项目角色：负责人\n\n5. 项目名称：高效能源管理智能系统\n   项目来源：省自然科学基金\n   项目经费：520000.00元\n   项目时间：2023-11-15 至 2025-11-14\n   项目角色：负责人\n\n6. 项目名称：区块链在供应链金融中的理论研究\n   项目来源：横向\n   项目经费：300000.00元\n   项目时间：2023-07-12 至 2026-06-09\n   项目角色：主要成员\n\n7. 项目名称：智能驾驶决策系统开发\n   项目来源：横向项目\n   项目经费：1500000.00元\n   项目时间：2020-05-01 至 2022-04-30\n   项目角色：负责人\n\n8. 项目名称：多源异构大数据融合技术研究\n   项目来源：国家自然科学基金\n   项目经费：750000.00元\n   项目时间：2018-01-15 至 2020-12-31\n   项目角色：负责人\n\n二、知识产权：\n1. 名称：云计算资源调度优化方法\n   类型：专利 - 发明专利\n   授权号：CN202389475D\n   授权日期：2023-06-25\n\n2. 名称：一种基于深度学习的图像识别方法\n   类型：专利 - 发明专利\n   授权号：CN123456789A\n   授权日期：2022-05-20\n\n3. 名称：区块链数据安全传输系统\n   类型：专利 - 实用新型专利\n   授权号：CN987654321B\n   授权日期：2021-02-25\n\n三、获奖情况：\n1. 奖项名称：全国科技进步奖\n   获奖等级：二等奖\n   颁发单位：教育部\n   获奖日期：2022-12-04\n\n2. 奖项名称：互联网创新应用奖\n   获奖等级：金奖\n   颁发单位：中国互联网协会\n   获奖日期：2022-11-20\n\n3. 奖项名称：省科技创新奖\n   获奖等级：一等奖\n   颁发单位：省科技厅\n   获奖日期：2021-09-15\n\n四、学术交流：\n1. 出访目的：参加SIGMOD数据库会议\n   出访地点：加拿大·多伦多\n   出访时间：2023-07-12 至 2023-07-12\n   出访成果：发表高水平论文\n\n2. 出访目的：访学调研\n   出访地点：英国剑桥\n   出访时间：2023-04-03 至 2023-06-13\n   出访成果：撰写SCI论文2篇，申请专利1项\n\n3. 出访目的：访问哈佛大学交流\n   出访地点：美国·波士顿\n   出访时间：2023-03-05 至 2023-03-20\n   出访成果：签署合作协议\n\n4. 出访目的：参加IEEE国际会议\n   出访地点：美国·旧金山\n   出访时间：2022-10-15 至 2022-10-22\n   出访成果：发表论文并建立合作关系\n\n\n\n请输出摘要：\n"
+  } ],
+  "temperature" : 0.3
+}
+2025-06-18 13:08:14.265 [http-nio-8082-exec-4] DEBUG d.l.c.m.qianfan.client.ResponseLoggingInterceptor - Response:
+- status code: 200
+- headers: [access-control-allow-headers: Content-Type], [access-control-allow-origin: *], [appid: 119129975], [content-type: application/json; charset=utf-8], [date: Wed, 18 Jun 2025 05:08:14 GMT], [p3p: CP=" OTI DSP COR IVA OUR IND COM "], [server: Apache], [set-cookie: BAIDUID=A367B1F84796E65B4FB697F2481E7E02:FG=1; expires=Thu, 31-Dec-37 23:55:55 GMT; max-age=2145916555; path=/; domain=.baidubce.com; version=1], [statement: AI-generated], [vary: Accept-Encoding], [x-aipe-self-def: eb_total_tokens:1238,prompt_tokens:1116,id:as-z0d5bc8z01], [x-baidu-request-id: 85c94991ef65bb0ead2a836124d1cfce1000105], [x-openapi-server-timestamp: 1750223285], [x-ratelimit-limit-requests: 10000], [x-ratelimit-limit-tokens: 800000], [x-ratelimit-remaining-requests: 9999], [x-ratelimit-remaining-tokens: 798884]
+- body: {"id":"as-z0d5bc8z01","object":"chat.completion","created":1750223285,"result":"张小hui教授专注于人工智能与大数据分析领域，近年来参与了多项重要科研项目，包括人工智能辅助教学、新型储能材料开发、多模态语音识别等，担任多个项目负责人，累计获得项目经费超千万元。在知识产权方面，张小hui教授拥有三项发明专利和一项实用新型专利，涉及云计算资源调度、深度学习图像识别及区块链数据安全传输等领域。其科研成果丰硕，荣获全国科技进步奖二等奖、互联网创新应用金奖及省科技创新奖一等奖等多项荣誉。此外，张小hui教授积极参与国际学术交流，多次出访海外知名学府及参加国际会议，发表高水平论文，建立广泛合作关系，推动了学科发展。","is_truncated":false,"need_clear_history":false,"finish_reason":"normal","usage":{"prompt_tokens":1116,"completion_tokens":122,"total_tokens":1238}}
+2025-06-18 13:08:14.269 [http-nio-8082-exec-4] INFO  h.c.s.service.impl.ResearchSummaryServiceImpl - 接收到大模型的响应: 张小hui教授专注于人工智能与大数据分析领域，近年来参与了多项重要科研项目，包括人工智能辅助教学、新型储能材料开发、多模态语音识别等，担任多个项目负责人，累计获得项目经费超千万元。在知识产权方面，张小hui教授拥有三项发明专利和一项实用新型专利，涉及云计算资源调度、深度学习图像识别及区块链数据安全传输等领域。其科研成果丰硕，荣获全国科技进步奖二等奖、互联网创新应用金奖及省科技创新奖一等奖等多项荣誉。此外，张小hui教授积极参与国际学术交流，多次出访海外知名学府及参加国际会议，发表高水平论文，建立广泛合作关系，推动了学科发展。
+2025-06-18 13:11:37.660 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-06-18 13:11:37.663 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
